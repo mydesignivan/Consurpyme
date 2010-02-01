@@ -1,17 +1,364 @@
-/* 
-    Document   : style
-    Created on : 14/01/2010, 08:51:23
-    Author     : MyDesign
-    Description:
-        Purpose of the stylesheet follows.
-*/
+h1{
+    color:#001D77;
+    font-size:180%;
+    font-weight:bold;
+}
+.text-logo{
+    color:#68ACE5;
+    font-family:"Times New Roman", serif;
+    font-size:130%;
+    font-style:italic;
+    font-weight:bold;
+}
+.text-subtitle{
+    color:#68ACE5;
+    font-size:130%;
+}
+.text-subtitle2{
+    color:#68ACE5;
+    font-weight:bold;
+}
+.italic{
+    font-style:italic;
+}
+.bold{
+    font-weight:bold;
+}
+.link{
+    color:#68ACE5;
+    text-decoration:underline;
+}
+.space-bottom{
+    margin-bottom:20px;
+}
+.space-bottom2{
+    margin-bottom:10px;
+}
+.border-none{
+    border:none !important;
+}
+a.link1, a.link1:visited, a.link1:link{
+    color: #fff;
+    text-align: left;
+    text-decoration: none;
+    font-weight: bold;
+}
+a.link1:hover{
+    text-decoration: underline;
+}
+/*----------------------- INPUT --------------------------*/
+.login{
+    border:1px solid #636F91;
+    width:200px;
+    float:right;
+}
+.button1{
+    border:1px solid #636F91;
+    background-color:#20558A;
+    color:#fff;
+}
+.button2{
+    background-color:#E6E6E6;
+    color:#032A44;
+}
+.button3{
+    background:url(../images/image_button.png) no-repeat left center;
+    color:#032A44;
+    width:89px;
+    height:24px;
+    border:none;
+}
+.border{
+  border:1px solid #68ACE5 !important;
+}
+.input1{
+    width:343px;
+}
+.input2{
+    width:80px;
+}
+.input3{
+    width:145px;
+}
+.input4{
+    background:url(../images/image_input1.png) no-repeat top left;
+    height:28px;
+    width:281px;
+    float:left;
+    margin-bottom:10px;
+}
+    .input4 input{
+        border:none !important;
+        background-color:transparent !important;
+        width:275px;
+        padding:5px 2px 0 2px;
+    }
+.input5{
+    background:url(../images/image_input2.png) no-repeat top left;
+    height:60px;
+    width:281px;
+    float:left;
+    margin-bottom:10px;
+}
+.input5 textarea{
+    border:none !important;
+    background-color:transparent !important;
+    height:50px;
+    width:275px;
+}
+.textarea1{
+    width:375px;
+    height:60px;
+}
+/*----------------------- FIN INPUT --------------------------*/
 
-/* 
-   TODO customize this sample style
-   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
-*/
 
-root { 
-    display: block;
+/*----------------------- header --------------------------*/
+.icon-menu{
+    text-align:right;
+    margin-top:20px;
+}
+.icon-menu a{
+    margin-right:10px;
+}
+.header{
+    background:url(../images/background_header.png) no-repeat top center;
+    height:410px;
+    position:relative;
+    z-index:10;
+}
+.logo{
+    margin-top:30px;
+}
+.titles{
+    margin-top:-50px;
+    position:relative;
+    z-index:20;
+}
+.flash{
+    height:245px;
+    border:1px solid red;
+    margin-top:-10px;
+}
+    .menu ul{
+        color:#fff;
+        font-size:120%;
+        margin-top:15px;
+        margin-left:30px;
+    }
+    .menu li{
+        display:inline-block;
+        margin-right:-3px;
+        text-align:center;
+    }
+        .menu li a{
+            background:url(../images/background_menu.png) repeat-x;
+            width:132px;
+            height:41px;
+            display:block;
+            padding-top:8px;
+        }
+        .menu li a:hover{
+            background:url(../images/background_menu_over.png) repeat-x;
+        }
+        .menu .current{
+            background:url(../images/background_menu_over.png) repeat-x;
+        }
+/*----------------------- FIN header --------------------------*/
+
+/*----------------------- Content --------------------------*/
+.content{
+    background-color:#1D3E6E;
+    margin-top:-55px;
+    position:relative;
+    z-index:0;
+    padding-top:60px;
+    padding-bottom:10px;
+    text-align:justify;
+}
+    .content .column img{
+        margin:0  0 10px 20px;
+    }
+
+/*----------------------- FIN Content --------------------------*/
+
+/*----------------------- Sidebar --------------------------*/
+    .sidebar .images{
+        background-color:#fff;
+        margin-bottom:10px;
+        text-align:center;
+        width:200px;
+        height:130px;
+        padding-top:5px;
+    }
+    .sidebar .image-iso{
+        background:url(../images/image_3.png) no-repeat top left;
+        height:321px;
+    }
+        .sidebar .image-iso .top-certificado{
+            margin:14px 0 0 20px;
+        }
+        .sidebar .image-iso .center-certificado{
+            height:230px;
+        }
+        .sidebar .image-iso .bottom-certificado{
+            font-size:90%;
+            color:#002C5F;
+            margin-left:20px;
+            width:135px;
+            float:left;
+        }
+        .sidebar .image-iso .bottom-certificado .icon-view{
+            width:29px;
+            float:right;
+            margin-top:-10px;
+        }
+/*-----------------------FIN Sidebar --------------------------*/
+
+/*----------------------- Footer --------------------------*/
+.footer{
+    background:url(../images/background_footer.png) repeat-x;
+    height:61px;
+    margin-top:-18px;
+    color:#1E4370;
+    padding-top:5px;
+    font-weight:bold;
+}
+.valid{
+    float:right !important;
+    text-align:right;
+}
+/*-----------------------FIN Footer --------------------------*/
+
+/*-----------------------PANEL --------------------------*/
+.content-login{
+    color:#1E4370;
+    border:1px solid #636F91;
+    margin-top:200px;
+    width:320px;
+    background-color:#E6E6E6;
+    padding:20px 0 0 20px;
+}
+    .content-login span{
+        margin-right:20px;
+        float:left;
+    }
+    .content-login .messagerror{
+        float:left;
+        padding:8px;
+        border:2px solid blue;
+        color:red;
+        background-color: #fff;
+        font-size:100%;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 280px;
+    }
+
+.table-proyect{
+    margin-top:10px;
+}
+    .table-proyect .top-table{
+       background-color:#20558A;
+       height:30px;
+       border:1px solid #fff;
+       text-align:center;
+    }
+    .align-left{
+        text-align:left !important;
+    }
+        .table-proyect .column-table{
+           border-right:1px solid #fff;
+           height:25px;
+           padding-top:5px;
+        }
+        .table-proyect .body-table{
+           background-color:#fff;
+           padding-left:2px;
+           color:#000;
+        }
+        .table-proyect .row-odd{
+           background-color:#FaFaFa;
+        }
+        .table-proyect .column-info{
+           border-right:1px solid #002C5F;
+           padding-top:5px;
+        }
+        .table-proyect .column-info1{
+           width:530px;
+        }
+    
+    
+.proyect-message{
+   border:1px solid #002C5F;
+   padding:10px;
+   background-color: #E6E6E6;
+   color:#000;
+   font-size: 110%;
+   margin-top:10px;
+   text-align: center;
 }
 
+/***************************table****************************/
+.table-proyect .top-table2{
+    background:url(../images/background_table.png) repeat-x top left;
+    text-align:center;
+}
+    .table-proyect .column-table2{
+       border-right:1px solid #2F4B79;
+    }
+    .table-proyect .column-info2{
+       background-color:#92AAC4;
+       border-bottom:2px solid #1D3E6E;
+    }
+    .table-proyect .column-info3{
+       background-color:#B5C3D7;
+       border-bottom:2px solid #1D3E6E;
+    }
+/*************************** FIN table****************************/
+
+/*************************** Servicios ****************************/
+.list-services{
+    margin-left:15px;
+}
+    .list-services li{
+        margin-top:5px;
+        list-style-position: inside;
+        padding:0 5px 0 0;
+    }
+    .list{
+        background:#224C7F;
+        list-style:url(../images/image_list.jpg);
+    }
+    .list2{
+        background:#1F4374;
+        list-style:url(../images/image_list2.jpg);
+    }
+
+    .image-service{
+        background-color:#fff;
+        padding:5px;
+        width:145px;
+        height:95px;
+        float:left;
+        margin-right:15px;
+        text-align:center;
+    }
+/*************************** FIN Servicios ****************************/
+
+/*************************** Contacto ****************************/
+.contact{
+    background:url(../images/background_contact.png) no-repeat top center;
+    height:275px;
+    color:#1D3E6E;
+}
+    .contact .contact-form{
+        margin-top:10px;
+    }
+    .row-form{
+        margin-top:20px;
+    }
+    .contact-form .column-form{
+        margin:0 -5px 0 15px;
+    }
