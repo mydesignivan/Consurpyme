@@ -1,5 +1,8 @@
 var Proyect = new (function(){
 
+    /*
+     * CONSTRUCTOR
+     */
     $(document).ready(function(){
         if(typeof document.form1!="undefined" ){
             $(document.form1.txtDateStart).datepicker();
@@ -8,6 +11,9 @@ var Proyect = new (function(){
         }
     });
 
+    /*
+     * METHODS PUBLIC
+     */
     this.save = function(){
         if( validate() ){
             document.form1.action = (document.form1.proyect_id.value=="") ? document.baseURI+"index.php/panel/proyect_create" : "index.php/panel/proyect_modified/"+document.form1.proyect_id.value;
@@ -45,6 +51,10 @@ var Proyect = new (function(){
         }
     };
 
+
+    /*
+     * METHODS PRIVATE
+     */
     var validate = function(){
         var f = document.form1;
         if( f.txtClient.value.length==0 ){

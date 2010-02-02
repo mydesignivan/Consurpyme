@@ -25,20 +25,20 @@
         <div class="proyecto span-19 push-1">
             <form action="" name="form1" method="post" enctype="application/x-www-form-urlencoded">
                 <div class="span-10 space-bottom">
-                    <span>Cliente</span><input class="float-right input1 border" type="text" name="txtClient" value="<?=getval($data, "client");?>" />
+                    <span>Cliente</span><input class="float-right input1 border" type="text" name="txtClient" value="<?=@$data["client"];?>" />
                 </div>
                 <div class="span-7 clear space-bottom">
                     <span>Descripci&oacute;n</span><br/>
-                    <textarea class="textarea1 border" rows="5" cols="20" name="txtDescription"><?=getval($data, "description");?></textarea>
+                    <textarea class="textarea1 border" rows="5" cols="20" name="txtDescription"><?=@$data["description"];?></textarea>
                 </div>
                 <div class="span-4 space-bottom clear">
-                    <span>Inicio &emsp;</span><input class="input2 border" type="text" name="txtDateStart" value="<?=getval($data, "date_start");?>" />
+                    <span>Inicio &emsp;</span><input class="input2 border" type="text" name="txtDateStart" value="<?=@$data["date_start"];?>" />
                 </div>
                 <div class="span-4 space-bottom">
-                    <span>Fin &emsp;</span><input class="input2 border" type="text" name="txtDateEnd" value="<?=getval($data, "date_end");?>" />
+                    <span>Fin &emsp;</span><input class="input2 border" type="text" name="txtDateEnd" value="<?=@$data["date_end"];?>" />
                 </div>
                 <div class="span-9 space-bottom clear">
-                    <span>Plazo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input class="input2 border" type="text" name="txtDatePlazo" value="<?=getval($data, "date_plazo");?>" />&nbsp;&nbsp;<input class="input3 border" type="text" name="txtPlazoText" value="<?=getval($data, "plazo_text");?>" />
+                    <span>Plazo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input class="input2 border" type="text" name="txtDatePlazo" value="<?=@$data["date_plazo"];?>" />&nbsp;&nbsp;<input class="input3 border" type="text" name="txtPlazoText" value="<?=@$data["plazo_text"];?>" />
                     <!--<select class="border" name="cboDay">
                         <option value="0">d&iacute;a</option>
                     <?php for( $n=1; $n<=31; $n++ ){?>
@@ -59,17 +59,13 @@
                     </select>-->
                 </div>
                 <div class="span-7 clear space-bottom">
-                    <span>Avance</span><br/>
-                    <textarea class="textarea1 border" rows="5" cols="20" name="txtAdvance"><?=getval($data, "advance");?></textarea>
-                </div>
-                <div class="span-7 clear space-bottom">
                     <span>Todos los campos son obligatorios</span>
                 </div>
                 <div class="span-7 clear space-bottom">
                     <input class="button2" type="button" value="Guardar" onclick="Proyect.save();" />
                     <input class="button2" type="button" value="Cancelar" onclick="javascript:location.href='<?=site_url('/panel/proyectos/');?>';" />
                 </div>
-                <input type="hidden" name="proyect_id" value="<?=getval($data, "proyect_id");?>" />
+                <input type="hidden" name="proyect_id" value="<?=@$data["proyect_id"];?>" />
             </form>
         </div>
     </div>

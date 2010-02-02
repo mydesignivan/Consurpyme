@@ -28,13 +28,11 @@
                 <li><img src="images/cliente_6.jpg" alt="Inspectorate"/></li>
                 <li><img src="images/cliente_7.jpg" alt="Frigorífico Pilotti"/></li>
                 <li><img src="images/cliente_8.jpg" alt="Instituto Riviere"/></li>
-                <li><img src="images/cliente_9.jpg" alt="Amex Argentina"/></li>
                 <li><img src="images/cliente_10.jpg" alt="Profru"/></li>
             </ul>
         </div>
         <div class="column span-5">
             <ul>
-                <li><img src="images/cliente_11.jpg" alt="BSI Inspectorate"/></li>
                 <li><img src="images/cliente_12.jpg" alt="Piedra Buena"/></li>
                 <li><img src="images/cliente_14.jpg" alt="Consolidar"/></li>
                 <li><img src="images/cliente_5.jpg" alt="Profertil"/></li>
@@ -44,8 +42,6 @@
             <ul>
                 <li><img src="images/cliente_16.jpg" alt="Liberty Art"/></li>
                 <li><img src="images/cliente_17.jpg" alt="Cima"/></li>
-                <li><img src="images/cliente_18.jpg" alt="Boston Seguros"/></li>
-                <li><img src="images/cliente_19.jpg" alt="F y R Muñiz"/></li>
                 <li><img src="images/cliente_13.jpg" alt="Interaccion"/></li>
             </ul>
         </div>

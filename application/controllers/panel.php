@@ -65,7 +65,7 @@ class Panel extends Controller{
 
         if( count($proyect_id)>0 ){
             $this->load->model('proyect_model');
-            if( $this->proyect_model->delete(implode(",", $proyect_id)) ){
+            if( $this->proyect_model->delete($proyect_id) ){
                 redirect('/panel/proyectos');
             }else{
                 show_error("Ha ocurrido un error al eliminar los datos.");
@@ -92,6 +92,17 @@ class Panel extends Controller{
         $this->load->view('panel_galleryform_view', array('data'=>$data, 'title'=>$title));
     }
     public function gallery_create(){
+        if( $_SERVER['REQUEST_METHOD']=="POST" ){
+            $this->load->model('gallery_model');
+
+            $status = $this->gallery_model->create($this->request_fields2());
+
+            if( $status=="ok" ){
+                redirect('/panel/galeria');
+            }else{
+                show_error("Ha ocurrido un error al guardar los datos.");
+            }
+        }
     }
     public function gallery_modified(){
     }
@@ -131,8 +142,7 @@ class Panel extends Controller{
             'date_start'    =>  $_POST['txtDateStart'],
             'date_end'      =>  $_POST['txtDateEnd'],
             'date_plazo'    =>  $_POST['txtDatePlazo'],
-            'plazo_text'    =>  $_POST['txtPlazoText'],
-            'advance'       =>  $_POST['txtAdvance']
+            'plazo_text'    =>  $_POST['txtPlazoText']
         );
     }
     private function request_fields2(){

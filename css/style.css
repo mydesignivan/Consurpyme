@@ -255,40 +255,6 @@ a.link1:hover{
         text-align: center;
         width: 280px;
     }
-
-.table-proyect{
-    margin-top:10px;
-}
-    .table-proyect .top-table{
-       background-color:#20558A;
-       height:30px;
-       border:1px solid #fff;
-       text-align:center;
-    }
-    .align-left{
-        text-align:left !important;
-    }
-        .table-proyect .column-table{
-           border-right:1px solid #fff;
-           height:25px;
-           padding-top:5px;
-        }
-        .table-proyect .body-table{
-           background-color:#fff;
-           padding-left:2px;
-           color:#000;
-        }
-        .table-proyect .row-odd{
-           background-color:#FaFaFa;
-        }
-        .table-proyect .column-info{
-           border-right:1px solid #002C5F;
-           padding-top:5px;
-        }
-        .table-proyect .column-info1{
-           width:530px;
-        }
-    
     
 .proyect-message{
    border:1px solid #002C5F;
@@ -301,21 +267,34 @@ a.link1:hover{
 }
 
 /***************************table****************************/
-.table-proyect .top-table2{
-    background:url(../images/background_table.png) repeat-x top left;
-    text-align:center;
+.table-proyect{
+    margin-top:10px;
 }
-    .table-proyect .column-table2{
+.vert-align-top{
+    vertical-align:top;
+}
+    .table-proyect .top-table{
+        background:url(../images/background_table.png) repeat-x top left;
+        text-align:center;
+    }
+    .table-proyect .column-table{
        border-right:1px solid #2F4B79;
     }
-    .table-proyect .column-info2{
+    .table-proyect .column-info{
        background-color:#92AAC4;
        border-bottom:2px solid #1D3E6E;
     }
-    .table-proyect .column-info3{
+    .table-proyect .column-info2{
        background-color:#B5C3D7;
        border-bottom:2px solid #1D3E6E;
     }
+    .table-proyect .column-info3{
+       background-color:#fff;
+       width:185px;
+    }
+        .table-proyect .column-info3 li{
+           display: inline-block;
+        }
 /*************************** FIN table****************************/
 
 /*************************** Servicios ****************************/
@@ -362,3 +341,4 @@ a.link1:hover{
     .contact-form .column-form{
         margin:0 -5px 0 15px;
     }
+ /***************************FIN Contacto ****************************/

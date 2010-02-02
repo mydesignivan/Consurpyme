@@ -15,36 +15,36 @@
 
     <div class="clear span-21 push-1 last content">
         <div class="span-19 push-1">
+            <?php if( $listProyects->num_rows==0 ){?>
+                <div class="proyect-message span-17 clear">
+                    No hay proyectos cargados.
+                </div>
+
+            <?php }else{?>
+
             <table class="span-18 table-proyect">
                 <thead>
-                    <tr class="top-table2">
-                        <td class="span-3 column-table2" ><span>Cliente</span></td>
-                        <td class="span-4 column-table2"><span>Descripci&oacute;n</span></td>
-                        <td class="span-2 column-table2"><span>Inicio</span></td>
-                        <td class="span-2 column-table2"><span>Fin</span></td>
-                        <td class="span-2 column-table2"><span>Plazo</span></td>
-                        <td class="span-3 column-table2 border-none"><span>Avance</span></td>
+                    <tr class="top-table">
+                        <td class="span-3 column-table" ><span>Cliente</span></td>
+                        <td class="span-4 column-table"><span>Descripci&oacute;n</span></td>
+                        <td class="span-2 column-table"><span>Inicio</span></td>
+                        <td class="span-2 column-table"><span>Fin</span></td>
+                        <td class="span-2 column-table"><span>Plazo</span></td>
                     </tr>
                 </thead>
                 <tbody class="span-18">
+                <?php foreach( $listProyects->result_array() as $row ){?>
                     <tr>
-                        <td class="span-3 column-info2"><span class="bold">Banco Patagonia</span></td>
-                        <td class="column-info3 span-4"><span>Proyecto, dirección, gerenciamiento y/o ejecución de obras públicas y privadas en los rubros</span></td>
-                        <td class="span-2 column-info2"><span>5/06/2009</span></td>
-                        <td class="column-info3 span-2"><span>5/06/2010</span></td>
-                        <td class="span-2 column-info2"><span>5/06/2010</span></td>
-                        <td class="column-info3 span-3"><span>Proyecto, dirección, gerenciamiento y/o ejecución de obras públicas y privadas en los rubros</span></td>
+                        <td class="span-3 column-info"><span class="bold"><?=$row['client'];?></span></td>
+                        <td class="span-4 column-info2"><span><?=character_limiter(nl2br($row['description']), 60);?></span></td>
+                        <td class="span-2 column-info"><span><?=$row['date_start'];?></span></td>
+                        <td class="span-2 column-info2"><span><?=$row['date_end'];?></span></td>
+                        <td class="span-2 column-info"><span><?=$row['date_plazo'];?></span></td>
                     </tr>
-                    <tr>
-                        <td class="span-3 column-info2"><span class="bold">Banco Patagonia</span></td>
-                        <td class="column-info3 span-4"><span>Proyecto, dirección, gerenciamiento y/o ejecución de obras públicas y privadas en los rubros</span></td>
-                        <td class="span-2 column-info2"><span>5/06/2009</span></td>
-                        <td class="column-info3 span-2"><span>5/06/2010</span></td>
-                        <td class="span-2 column-info2"><span>5/06/2010</span></td>
-                        <td class="column-info3 span-3"><span>Proyecto, dirección, gerenciamiento y/o ejecución de obras públicas y privadas en los rubros</span></td>
-                    </tr>
+                <?php }?>
                 </tbody>
             </table>
+            <?php }?>
         </div>
     </div>
 

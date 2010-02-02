@@ -41,29 +41,22 @@
                         <td class="span-2 column-table"><span>Inicio</span></td>
                         <td class="span-2 column-table"><span>Fin</span></td>
                         <td class="span-2 column-table"><span>Plazo</span></td>
-                        <td class="span-3 column-table border-none"><span>Avance</span></td>
                     </tr>
                 </thead>
     
 
-                <?php
-                    $n=0;
-                    foreach( $listProyects->result_array() as $row ){
-                    $n++;
-                    $class = ($n%2) ? 'row-odd' : '';
-                 ?>
-                <tbody class="body-table span-18 <?=$class;?>">
+                <tbody class="span-18">
+                <?php foreach( $listProyects->result_array() as $row ){?>
                     <tr>
                         <td class="column-info span-0"><input type="checkbox" class="itemCheck" value="<?=$row['proyect_id'];?>" /></td>
-                        <td class="column-info span-3"><?=$row['client'];?></td>
+                        <td class="column-info2 span-3"><?=$row['client'];?></td>
                         <td class="column-info span-4"><?=character_limiter(nl2br($row['description']), 60);?></td>
-                        <td class="column-info span-2"><?=$row['date_start'];?></td>
+                        <td class="column-info2 span-2"><?=$row['date_start'];?></td>
                         <td class="column-info span-2"><?=$row['date_end'];?></td>
-                        <td class="column-info span-2"><?=$row['date_plazo'];?></td>
-                        <td class="column-info span-3 border-none"><?=character_limiter(nl2br($row['advance']), 60);?></td>
+                        <td class="column-info2 span-2"><?=$row['date_plazo'];?></td>
                     </tr>
-                </tbody>
                 <?php }?>
+                </tbody>
             </table>
             <!--end .table-proyect-->
             <?php }?>

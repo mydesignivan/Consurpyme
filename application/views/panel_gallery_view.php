@@ -31,44 +31,27 @@
                     No hay Galer&iacute;as de Fotos cargadas.
                 </div>
 
+            <?php }else{?>
+
             <table class="span-18 table-proyect">
                 <thead>
                     <tr class="top-table">
-                        <td class="span-0 column-table">&nbsp;</td>
-                        <td class="column-table align-left span-5" ><span>T&iacute;tulo</span></td>
-                        <td class="column-table align-left span-11-1 border-none"><span>Descripci&oacute;n</span></td>
+                        <td class="span-0 column-table" ></td>
+                        <td class="span-5 column-table"><span>T&iacute;tulo</span></td>
+                        <td class="span-11-1 column-table"><span>Descripci&oacute;n</span></td>
                     </tr>
                 </thead>
-                <tbody class="body-table span-18">
+
+                <tbody class="span-18">
+                <?php foreach( $list->result_array() as $row ){?>
                     <tr>
-                        <td class="column-info span-0"><input type="checkbox" class="itemCheck" value="" /></td>
-                        <td class="column-info span-5"></td>
-                        <td class="column-info span-11-1 border-none"></td>
+                        <td class="span-0 column-info"><input type="checkbox" class="itemCheck" value="<?=$row['gallery_id'];?>" /></td>
+                        <td class="span-5 column-info2"><span><?=character_limiter(nl2br($row['title']), 60);?></span></td>
+                        <td class="span-11-1 column-info"><span><?=character_limiter(nl2br($row['description']), 60);?></span></td>
                     </tr>
+                <?php }?>
                 </tbody>
             </table>
-
-            <?php }else{?>
-
-            <div class="table-proyect span-19 clear">
-                <div class="top-table span-18">
-                    <div class="span-1 column-table"></div>
-                    <div class="column-table align-left span-5"><span>T&iacute;tulo</span></div>
-                    <div class="column-table align-left span-11-1 border-none"><span>Descripci&oacute;n</span></div>
-                </div>
-                
-                <?php
-                    $n=0;
-                    foreach( $list->result_array() as $row ){
-                    $n++;
-                    $class = ($n%2) ? 'row-odd' : '';
-                 ?>
-                <div class="body-table span-18 <?=$class;?>">
-                    <div class="column-info span-1"><input type="checkbox" class="itemCheck" value="<?=$row["gallery_id"];?>" /></div>
-                    <div class="column-info span-5"><?=$row['title'];?></div>
-                    <div class="column-info span-11-1 border-none"><?=character_limiter(nl2br($row['description']), 60);?></div>
-                </div>
-                <?php }?>
             </div><!--end .table-proyect-->
             <?php }?>
         </div>

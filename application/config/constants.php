@@ -36,6 +36,38 @@ define('FOPEN_READ_WRITE_CREATE', 				'a+b');
 define('FOPEN_WRITE_CREATE_STRICT', 			'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
+/*
+|--------------------------------------------------------------------------
+| NOMBRE DE LAS TABLAS   (BASE DE DATO)
+|--------------------------------------------------------------------------
+*/
+define('TBL_GALLERY',  'gallery');
+define('TBL_IMAGES',   'images');
+define('TBL_PROYECTS', 'proyects');
+define('TBL_USERS',    'users');
+
+/*
+|--------------------------------------------------------------------------
+| MENSAJES DE ERROR
+|--------------------------------------------------------------------------
+*/
+define('ERR_UPLOAD_NOTUPLOAD', 'El archivo no ha podido llegar al servidor.');
+define('ERR_UPLOAD_MAXSIZE', 'El tamaño del archivo debe ser menor a %s MB.');
+define('ERR_UPLOAD_FILETYPE', 'El tipo de archivo es incompatible.');
+
+
+/*
+|--------------------------------------------------------------------------
+| UPLOAD FILE
+|--------------------------------------------------------------------------
+*/
+define('UPLOAD_DIR', './uploads/');
+define('UPLOAD_DIR_TMP', './uploads/tmp/');
+define('UPLOAD_WIDTH', 107);
+define('UPLOAD_HEIGHT', 90);
+define('UPLOAD_FILETYPE', 'gif|jpg|png');
+define('UPLOAD_MAXSIZE', 1024); //Expresado en Kylobytes
+
 
 /* End of file constants.php */
 /* Location: ./system/application/config/constants.php */

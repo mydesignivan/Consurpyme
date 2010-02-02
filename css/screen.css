@@ -105,8 +105,8 @@ pre,code,tt { font: 1em 'andale mono', 'lucida console', monospace; line-height:
 -------------------------------------------------------------- */
 
 li ul, 
-li ol       { margin:0 1.5em; }
-ul, ol      { margin: 0 1.5em 1.5em 1.5em; }
+li ol       { margin:0; }
+ul, ol      { margin: 0; }
 
 ul          { list-style-type: none; }
 ol          { list-style-type: decimal; }
@@ -177,6 +177,7 @@ tbody       {color:#002C5F;}
 .span-0  { width: 8px; }
 .span-1  { width: 30px; }
 .span-2  { width: 70px; }
+.span-2-1  { width: 80px; }
 .span-3  { width: 110px; }
 .span-4  { width: 150px; }
 .span-5  { width: 190px; }

@@ -1,11 +1,9 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 class Users_model extends Model {
 
-    private $table_from;
 
     function  __construct() {
         parent::Model();
-        $this->table_from = "users";
     }
 
     /*
@@ -15,7 +13,7 @@ class Users_model extends Model {
         // MODIFICA LOS DATOS
         $this->db->where('user_id', $this->session->userdata('user_id'));
 
-        if( !$this->db->update($this->table_from, $data) ) {
+        if( !$this->db->update(TBL_USERS, $data) ) {
             return false;
         }
 
