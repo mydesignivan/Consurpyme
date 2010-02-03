@@ -170,3 +170,18 @@ function isDate(el, pattern, type){
 Array.prototype.unset_array = function(key){
     return this.splice(this.indexOf(key), 1);
 }
+
+ function arrayToObject(arr){
+    if( arr.length>0 ){
+        var str="";
+        var isObject = !($.isArray(arr));
+
+        $(arr).each(function(i){
+            var val = !isObject ? this : this.value;
+            str+='"'+(i)+'":"'+val+'",';
+        });
+        str = str.substr(0, str.length-1);
+        return "{"+str+"}";
+    }
+    return '';
+}

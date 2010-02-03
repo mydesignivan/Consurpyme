@@ -46,6 +46,12 @@ a.link1, a.link1:visited, a.link1:link{
 a.link1:hover{
     text-decoration: underline;
 }
+
+.display-hidden{display:none;}
+.display-visible{display:block;}
+
+
+
 /*----------------------- INPUT --------------------------*/
 .login{
     border:1px solid #636F91;

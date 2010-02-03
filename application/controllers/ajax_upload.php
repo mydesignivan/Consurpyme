@@ -41,9 +41,9 @@ class Ajax_upload extends Controller {
      * FUNCTIONS PRIVATE
      */
     private function validate(){
-        if( !is_uploaded_file($this->file['tmp_name']) ) show_error(ERR_UPLOAD_NOTUPLOAD);
-        if( round($this->file['size']/1024, 2) > (int)UPLOAD_MAXSIZE ) show_error(sprintf(ERR_UPLOAD_MAXSIZE, (int)UPLOAD_MAX_SIZE/2));
-        if( !$this->is_allowed_filetype() ) show_error(ERR_UPLOAD_FILETYPE);
+        if( !is_uploaded_file($this->file['tmp_name']) ) die(ERR_UPLOAD_NOTUPLOAD);
+        if( round($this->file['size']/1024, 2) > (int)UPLOAD_MAXSIZE ) die(sprintf(ERR_UPLOAD_MAXSIZE, (int)UPLOAD_MAX_SIZE/2));
+        if( !$this->is_allowed_filetype() ) die(ERR_UPLOAD_FILETYPE);
 
         return true;
     }

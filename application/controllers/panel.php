@@ -84,12 +84,14 @@ class Panel extends Controller{
         $this->load->model('gallery_model');
         if( !$this->uri->segment(3) ){
             $data = array();
+            $resultGallery = false;
             $title = "NUEVA GALERIA";
         }else{
             $data = $this->gallery_model->get_gallery($this->uri->segment(3));
+            $resultGallery = $this->gallery_model->get_listImages($this->uri->segment(3));
             $title = "MODIFICAR GALERIA";
         }
-        $this->load->view('panel_galleryform_view', array('data'=>$data, 'title'=>$title));
+        $this->load->view('panel_galleryform_view', array('data'=>$data, 'title'=>$title, 'listImages'=>$resultGallery));
     }
     public function gallery_create(){
         if( $_SERVER['REQUEST_METHOD']=="POST" ){
@@ -148,7 +150,8 @@ class Panel extends Controller{
     private function request_fields2(){
         return array(
             'title'         =>  $_POST['txtTitle'],
-            'description'   =>  $_POST['txtDescription']
+            'description'   =>  $_POST['txtDescription'],
+            'images_new'    =>  $_POST['images_new']
         );
     }
 
