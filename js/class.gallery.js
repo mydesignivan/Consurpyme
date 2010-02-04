@@ -5,11 +5,22 @@ var Gallery = new (function(){
      */
     this.save = function(){
         if( validate() ){
-            var images_new = new Array();
             $('input.ajaxupload-filename').each(function(){
-                if( this.value!="" ) images_new.push(this.value);
+                if( this.value!="" ) arr_images_new.push(this.value);
             });
-            document.form1.images_new.value = arrayToObject(images_new);
+
+            /*alert("new: "+arr_images_new);
+            alert("del: "+arr_images_delete);
+            alert("modid: "+arr_images_modified.id);
+            alert("modnam: "+arr_images_modified.name);
+
+            return;*/
+
+            document.form1.images_new.value = arrayToObject(arr_images_new);
+            document.form1.images_deletes.value = arrayToObject(arr_images_delete);
+            document.form1.images_modified_id.value = arrayToObject(arr_images_modified.id);
+            document.form1.images_modified_name.value = arrayToObject(arr_images_modified.name);
+
             document.form1.action = (document.form1.gallery_id.value=="") ? document.baseURI+"index.php/panel/gallery_create" : "index.php/panel/gallery_modified/"+document.form1.gallery_id.value;
             document.form1.submit();
         }
@@ -20,12 +31,12 @@ var Gallery = new (function(){
 
         if( count<10 ){
             var html = '<div id="div-upload" class="span-18 clear space-bottom2">';
-            html+= '<div class="span-3 index-image">Im&aacute;gen '+(count+1)+'</div>';
-            html+= '<input type="file" class="float-left border" size="22" name="uploadFile" onchange="Gallery.upload(this);" />';
-            html+= '<input type="hidden" class="ajaxupload-filename" />';
-            html+= '<input type="button" value="Eliminar" onclick="Gallery.remove_inputfile(this)" />';
-            html+= '<div class="span-4 display-hidden ajax-loader">&nbsp;&nbsp;<img src="images/ajax-loader.gif" alt="" />&nbsp;Subiendo...</div>';
-            html+= '</div>';
+                html+= '<div class="span-3 index-image">Im&aacute;gen '+(count+1)+'</div>';
+                html+= '<input type="file" class="float-left border" size="22" name="uploadFile" onchange="Gallery.upload(this);" />';
+                html+= '<input type="hidden" class="ajaxupload-filename" />';
+                html+= '<input type="button" value="Eliminar" onclick="Gallery.remove_inputfile(this)" />';
+                html+= '<div class="span-4 display-hidden ajax-loader">&nbsp;&nbsp;<img src="images/ajax-loader.gif" alt="" />&nbsp;Subiendo...</div>';
+                html+= '</div>';
             $(el).parent().before($(html));
         }
 
@@ -49,11 +60,26 @@ var Gallery = new (function(){
         return false;
     };
 
-    this.remove_inputfile = function(el){
+    this.remove_inputfile = function(el, image_id){            
         $(el).parent().remove();
         $('div.index-image').each(function(i){
             el.innerHTML = "Im&aacute;gen "+(i+1);
         });
+
+        var input_hidden = $(el).parent().find('.ajaxupload-filename');
+        if( input_hidden.length==0 || (input_hidden.length>0 && input_hidden.val()!="") ){
+            if( typeof image_id!="undefined" ) {
+                if( $.inArray(image_id, arr_images_delete)==-1 ){
+                    arr_images_delete.push(image_id);
+                }
+
+                var key = $.inArray(image_id, arr_images_modified.id);
+                if( key!=-1 ){
+                    arr_images_modified.id.unset_array(key);
+                    arr_images_modified.name.unset_array(key);
+                }
+            }
+        }
     };
 
     this.buttons = {
@@ -91,6 +117,12 @@ var Gallery = new (function(){
      */
     var auForm = false;
     var working = false;
+    var arr_images_modified = {
+        id : Array(),
+        name : Array()
+    };
+    var arr_images_new = new Array();
+    var arr_images_delete = new Array();
 
     /*
      * METHODS PRIVATE
@@ -128,7 +160,13 @@ var Gallery = new (function(){
             }else{
                 img.attr('src', filename);
             }
+
+            if( input.id ){
+                add_image_modified(parseInt(input.id.substr(2)), input.value);
+            }
+
             ajax_loader.hidden(input);
+
         }else{
             alert(content);
         }
@@ -150,6 +188,14 @@ var Gallery = new (function(){
             iframe.attr('src', '')
             iframe.bind('load', function(){upload_success(el)});
         return iframe;
+    };
+
+    var add_image_modified = function(id, name){
+        if( $.inArray(id, arr_images_modified.id)==-1 ){
+            arr_images_modified.id.push(id);
+            arr_images_modified.name.push(name);
+            if( $.inArray(id, arr_images_delete)==-1 ) arr_images_delete.push(id);
+        }
     };
 
 

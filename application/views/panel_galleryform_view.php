@@ -40,12 +40,17 @@
 
 
                 <?php }else{
-                    
-                    foreach( $listImages->result_array() as $row ){?>
+
+                    $n=0;
+                    foreach( $listImages->result_array() as $row ){
+                        $n++;
+                 ?>
                         <div id="div-upload" class="span-18 clear space-bottom2">
                             <div class="span-3 index-image"><img src="<?=$row['image_thumb'];?>" alt="<?=$row['name_original'];?>" class="ajaxupload-image" /></div>
-                            <input type="file" class="float-left border" size="22" name="uploadFile" onchange="Gallery.upload(this);" />
-                            <input type="hidden" class="ajaxupload-filename" value="<?=$row['image_thumb'];?>" />
+                            <input type="file" class="float-left border" size="22" name="uploadFile" onchange="Gallery.upload(this);" id="id<?=$row['image_id'];?>" />
+                        <?php if( $n>1 ){?>
+                            <input type="button" value="Eliminar" onclick="Gallery.remove_inputfile(this, <?=$row['image_id'];?>)" />
+                        <?php }?>
                             <div class="span-4 display-hidden ajax-loader">&nbsp;&nbsp;<img src="images/ajax-loader.gif" alt="" />&nbsp;Subiendo...</div>
                         </div>
                 <?php }
@@ -67,6 +72,9 @@
                 
                 <input type="hidden" name="gallery_id" value="<?=@$data["gallery_id"];?>" />
                 <input type="hidden" name="images_new" />
+                <input type="hidden" name="images_deletes" />
+                <input type="hidden" name="images_modified_id" />
+                <input type="hidden" name="images_modified_name" />
             </form>
         </div>
     </div>

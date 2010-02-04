@@ -33,28 +33,27 @@
 
             <?php }else{?>
 
-            <table class="span-18 table-proyect">
-                <thead>
-                    <tr class="top-table">
-                        <td class="span-0 column-table" ></td>
-                        <td class="span-5 column-table"><span>T&iacute;tulo</span></td>
-                        <td class="span-11-1 column-table"><span>Descripci&oacute;n</span></td>
-                    </tr>
-                </thead>
+                <table class="span-18 table-proyect">
+                    <thead>
+                        <tr class="top-table">
+                            <td class="span-0 column-table" ></td>
+                            <td class="span-5 column-table"><span>T&iacute;tulo</span></td>
+                            <td class="span-11-1 column-table"><span>Descripci&oacute;n</span></td>
+                        </tr>
+                    </thead>
 
-                <tbody class="span-18">
-                <?php foreach( $list->result_array() as $row ){?>
-                    <tr>
-                        <td class="span-0 column-info"><input type="checkbox" class="itemCheck" value="<?=$row['gallery_id'];?>" /></td>
-                        <td class="span-5 column-info2"><span><?=character_limiter(nl2br($row['title']), 60);?></span></td>
-                        <td class="span-11-1 column-info"><span><?=character_limiter(nl2br($row['description']), 60);?></span></td>
-                    </tr>
-                <?php }?>
-                </tbody>
-            </table>
-            </div><!--end .table-proyect-->
+                    <tbody class="span-18">
+                    <?php foreach( $list->result_array() as $row ){?>
+                        <tr>
+                            <td class="span-0 column-info"><input type="checkbox" class="itemCheck" value="<?=$row['gallery_id'];?>" /></td>
+                            <td class="span-5 column-info2"><span><?=character_limiter(nl2br($row['title']), 60);?></span></td>
+                            <td class="span-11-1 column-info"><span><?=character_limiter(nl2br($row['description']), 60);?></span></td>
+                        </tr>
+                    <?php }?>
+                    </tbody>
+                </table>
             <?php }?>
-        </div>
+        </div><!--end .table-proyect-->
     </div>
 
     <?php include("includes/footer_inc.php");?>

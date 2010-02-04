@@ -24,10 +24,18 @@ h1{
 .bold{
     font-weight:bold;
 }
-.link{
+a.link{
     color:#68ACE5;
     text-decoration:underline;
 }
+a.link2{
+    color:#002C5F;
+    text-decoration:none;
+    font-weight: bold;
+}
+    a.link2:hover{
+        text-decoration:underline;
+    }
 .space-bottom{
     margin-bottom:20px;
 }

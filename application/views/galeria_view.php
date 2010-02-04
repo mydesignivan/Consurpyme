@@ -3,6 +3,20 @@
 <head>
     <title>Consurpyme</title>
     <?php include("includes/head_inc.php");?>
+
+    <!-- JQUERY FANCYBOX -->
+    <link rel="stylesheet" type="text/css" href="js/jquery.fancybox/jquery.fancybox.css" media="screen" />
+    <script type="text/javascript" src="js/jquery.fancybox/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox/jquery.fancybox-1.2.1.pack.js"></script>
+    <script type="text/javascript">
+    <!--
+        $(document).ready(function() {
+            $("a.image-fancybox").fancybox();
+        });
+    -->
+    </script>
+    <!--END SCRIPT-->
+
 </head>
 
 <body>
@@ -26,26 +40,24 @@
                     </tr>
                 </thead>
                 <tbody class="span-19">
-                
+                <?php
+                $n=0;
+                foreach( $listGallery->result_array() as $row ){$n++;?>
                     <tr>
-                        <td class="span-1 column-info vert-align-top"><span class="bold">Nombre 1</span></td>
-                        <td class="span-2-1 column-info2 vert-align-top"><span>Descripcion Proyecto 1</span></td>
+                        <td class="span-1 column-info vert-align-top"><span class="bold"><?=character_limiter($row['title'], 60);?></span></td>
+                        <td class="span-2-1 column-info2 vert-align-top"><span><?=character_limiter(nl2br($row['description'], 60));?></span></td>
                         <td class="column-info3 column-info">
                             <ul>
-                                <li><a href="#"><img src="images/gallery/image1_galery.jpg" alt="obras"/></a></li>
-                                <li><a href="#"><img src="images/gallery/image2_galery.jpg" alt="obras"/></a></li>
-                                <li><a href="#"><img src="images/gallery/image3_galery.jpg" alt="obras"/></a></li>
-                                <li><a href="#"><img src="images/gallery/image4_galery.jpg" alt="obras"/></a></li>
-                                <li><a href="#"><img src="images/gallery/image1_galery.jpg" alt="obras"/></a></li>
-                                <li><a href="#"><img src="images/gallery/image2_galery.jpg" alt="obras"/></a></li>
-                                <li><a href="#"><img src="images/gallery/image3_galery.jpg" alt="obras"/></a></li>
-                                <li><a href="#"><img src="images/gallery/image4_galery.jpg" alt="obras"/></a></li>
-                                <li><a href="#"><img src="images/gallery/image1_galery.jpg" alt="obras"/></a></li>
-                                <li><a href="#"><img src="images/gallery/image2_galery.jpg" alt="obras"/></a></li>
+                            <?php $listImages = $this->gallery_model->get_listImages($row['gallery_id']);
+                                foreach( $listImages->result_array() as $row2 ){?>
+
+                                <li><a href="<?=$row2['image_real'];?>" class="image-fancybox" rel="group<?=$n;?>"><img src="<?=$row2['image_thumb'];?>" alt="<?=$row2['name_original'];?>" /></a></li>
+
+                            <?php }?>
                             </ul>
                         </td>
                     </tr>
-                
+            <?php }?>
                 </tbody>
             </table>
             

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> SimpleModal Basic Modal Dialog </title>
+<meta name='author' content='Eric Martin' />
+<meta name='copyright' content='2009 - Eric Martin' />
+
+<!-- Contact Form CSS files -->
+<link type='text/css' href='css/basic.css' rel='stylesheet' media='screen' />
+
+<!-- IE 6 "fixes" -->
+<!--[if lt IE 7]>
+<link type='text/css' href='css/basic_ie.css' rel='stylesheet' media='screen' />
+<![endif]-->
+
+<!-- JS files are loaded at the bottom of the page -->
+<!-- Load jQuery, SimpleModal and Basic JS files -->
+<script type='text/javascript' src='js/jquery.js'></script>
+<script type='text/javascript' src='js/jquery.simplemodal.js'></script>
+<script type='text/javascript' src='js/basic.js'></script>
+</head>
+<body>
+
+<div id='basic-modal'>
+<h2>Basic Modal Dialog</h2>
+<p>A basic modal dialog with minimal styling and without any additional settings. There are a few CSS attributes set internally by SimpleModal, however, SimpleModal relies mostly on external CSS for the look and feel.</p>
+<input type='button' name='basic' value='Demo' class='basic demo'/> or <a href='#' class='basic'>Demo</a>
+</div>
+
+
+<div id="basic-modal-content">
+	<h3>Basic Modal Dialog</h3>
+	<p>For this demo, SimpleModal is using this "hidden" data for its content. You can also populate the modal dialog with standard HTML or with DOM element(s).</p>
+	<p>Examples:</p>
+	<p><code>$('#basicModalContent').modal(); // jQuery object; this demo</code></p>
+	<p><code>$.modal(document.getElementById('basicModalContent')); // DOM</code></p>
+	<p><code>$.modal('&lt;p&gt;&lt;b&gt;HTML&lt;/b&gt; elements&lt;/p&gt;'); // HTML</code></p>
+
+	<p><a href='http://www.ericmmartin.com/projects/simplemodal/'>More details...</a></p>
+</div>
+
+
+</body>
+</html>

@@ -87,11 +87,6 @@ var Proyect = new (function(){
             f.txtPlazoText.focus();
             return false;
         }
-        if( f.txtAdvance.value.length==0 ){
-            alert('Ingrese el campo "Avance"');
-            f.txtAdvance.focus();
-            return false;
-        }
 
         return true;
     };

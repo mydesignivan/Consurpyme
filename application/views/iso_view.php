@@ -3,6 +3,18 @@
 <head>
     <title>Consurpyme</title>
     <?php include("includes/head_inc.php");?>
+
+    <!-- SCRIPT SIMPLE MODAL -->
+    <link type='text/css' href='js/simplemodal/css/basic.css' rel='stylesheet' media='screen' />
+    <!--[if lt IE 7]>
+    <link type='text/css' href='js/simplemodal/css/basic_ie.css' rel='stylesheet' media='screen' />
+    <![endif]-->
+    <script type='text/javascript' src='js/simplemodal/js/jquery.simplemodal.js'></script>
+    <script type='text/javascript' src='js/simplemodal/js/basic.js'></script>
+    <!--END SCRIPT-->
+<style media="print" type="text/css">
+div {display:none}
+</style> 
 </head>
 
 <body>
@@ -36,11 +48,11 @@
                     <span class="bold">Certificado</span><br/>
                     <span class="text-subtitle">Iso 9001-2008</span>
                 </div>
-                <div class="center-certificado span-5"></div>
+                <a href="#" class="simplemodal-link"><div class="center-certificado span-5"></div></a>
                 <div class="bottom-certificado">
-                    <span>Ampliar Imagen</span>
+                    <a href="#" class="link2 simplemodal-link">Ampliar Imagen</a>
                     <div class="icon-view">
-                        <a href="#"><img src="images/icon_enlarge.png" alt="ampliar imagen"/></a>
+                        <a href="#" class="simplemodal-link"><img src="images/icon_enlarge.png" alt=""/></a>
                     </div>
                 </div>
             </div>
@@ -50,5 +62,8 @@
     <?php include("includes/footer_inc.php");?>
     
 </div>
+
+<div id="simplemodal-window"></div>
+
 </body>
 </html>

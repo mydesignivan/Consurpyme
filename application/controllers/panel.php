@@ -57,15 +57,10 @@ class Panel extends Controller{
         }
     }
     public function proyect_delete(){
-        $proyect_id = array();
-        for( $n=3; $n<=$this->uri->total_segments(); $n++ ){
-            $seg = $this->uri->segment($n);
-            if( is_numeric($seg) ) $proyect_id[] = $seg;
-        }
-
-        if( count($proyect_id)>0 ){
+        $id = $this->get_id();
+        if( count($id)>0 ){
             $this->load->model('proyect_model');
-            if( $this->proyect_model->delete($proyect_id) ){
+            if( $this->proyect_model->delete($id) ){
                 redirect('/panel/proyectos');
             }else{
                 show_error("Ha ocurrido un error al eliminar los datos.");
@@ -107,8 +102,33 @@ class Panel extends Controller{
         }
     }
     public function gallery_modified(){
+        if( $_SERVER['REQUEST_METHOD']=="POST" ){
+            $this->load->model('gallery_model');
+            
+            $data = $this->request_fields2();
+            $data['images_deletes'] = $_POST['images_deletes'];
+            $data['images_modified_id'] = $_POST['images_modified_id'];
+            $data['images_modified_name'] = $_POST['images_modified_name'];
+
+            $status = $this->gallery_model->update($data, $this->uri->segment(3));
+
+            if( $status=="ok" ){
+                redirect('/panel/galeria');
+            }else{
+                show_error("Ha ocurrido un error al guardar los datos.");
+            }
+        }
     }
-    public function gallery_gallery(){
+    public function gallery_delete(){
+        $id = $this->get_id();
+        if( count($id)>0 ){
+            $this->load->model('gallery_model');
+            if( $this->gallery_model->delete($id) ){
+                redirect('/panel/galeria');
+            }else{
+                show_error("Ha ocurrido un error al eliminar los datos.");
+            }
+        }
     }
 
 
@@ -149,11 +169,20 @@ class Panel extends Controller{
     }
     private function request_fields2(){
         return array(
-            'title'         =>  $_POST['txtTitle'],
-            'description'   =>  $_POST['txtDescription'],
-            'images_new'    =>  $_POST['images_new']
+            'title'                 =>  $_POST['txtTitle'],
+            'description'           =>  $_POST['txtDescription'],
+            'images_new'            =>  $_POST['images_new']
         );
     }
+    private function get_id(){
+        $id = array();
+        for( $n=3; $n<=$this->uri->total_segments(); $n++ ){
+            $seg = $this->uri->segment($n);
+            if( is_numeric($seg) ) $id[] = $seg;
+        }
+        return $id;
+    }
+
 
 }
 

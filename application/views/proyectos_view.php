@@ -15,13 +15,6 @@
 
     <div class="clear span-21 push-1 last content">
         <div class="span-19 push-1">
-            <?php if( $listProyects->num_rows==0 ){?>
-                <div class="proyect-message span-17 clear">
-                    No hay proyectos cargados.
-                </div>
-
-            <?php }else{?>
-
             <table class="span-18 table-proyect">
                 <thead>
                     <tr class="top-table">
@@ -44,7 +37,6 @@
                 <?php }?>
                 </tbody>
             </table>
-            <?php }?>
         </div>
     </div>
 
