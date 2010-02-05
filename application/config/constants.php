@@ -54,7 +54,7 @@ define('TBL_USERS',    'users');
 define('ERR_UPLOAD_NOTUPLOAD', 'El archivo no ha podido llegar al servidor.');
 define('ERR_UPLOAD_MAXSIZE', 'El tamaño del archivo debe ser menor a %s MB.');
 define('ERR_UPLOAD_FILETYPE', 'El tipo de archivo es incompatible.');
-
+define('ERR_EMAIL_NOTSEND', 'El email no ha podido ser enviado.');
 
 /*
 |--------------------------------------------------------------------------
@@ -67,6 +67,16 @@ define('UPLOAD_WIDTH', 107);
 define('UPLOAD_HEIGHT', 90);
 define('UPLOAD_FILETYPE', 'gif|jpg|png');
 define('UPLOAD_MAXSIZE', 1024); //Expresado en Kylobytes
+
+
+/*
+|--------------------------------------------------------------------------
+| EMAIL (FORMULARIO DE CONSULTA)
+|--------------------------------------------------------------------------
+*/
+define('EMAIL_CONTACT_TO', 'ivan@mydesign.com.ar');
+define('EMAIL_CONTACT_SUBJECT', 'www.consurpyme.com.ar - Formulario de consulta');
+define('EMAIL_CONTACT_MESSAGE', '<b>Nombre y Apellido:</b> %s<br><b>Asunto:</b> %s<br><b>Horario de contacto:</b> %s<br><b>Email:</b> %s<br><b>Mensaje:</b><hr color="#000000" />%s');
 
 
 /* End of file constants.php */

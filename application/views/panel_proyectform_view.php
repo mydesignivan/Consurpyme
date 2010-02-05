@@ -38,25 +38,7 @@
                     <span>Fin &emsp;</span><input class="input2 border" type="text" name="txtDateEnd" value="<?=@$data["date_end"];?>" />
                 </div>
                 <div class="span-9 space-bottom clear">
-                    <span>Plazo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input class="input2 border" type="text" name="txtDatePlazo" value="<?=@$data["date_plazo"];?>" />&nbsp;&nbsp;<input class="input3 border" type="text" name="txtPlazoText" value="<?=@$data["plazo_text"];?>" />
-                    <!--<select class="border" name="cboDay">
-                        <option value="0">d&iacute;a</option>
-                    <?php for( $n=1; $n<=31; $n++ ){?>
-                        <option value="<?=$n;?>"><?=$n;?></option>
-                    <?php }?>
-                    </select>
-                    <select class="border" name="cboMonth">
-                        <option value="0">mes</option>
-                    <?php for( $n=1; $n<=12; $n++ ){?>
-                        <option value="<?=$n;?>"><?=$n;?></option>
-                    <?php }?>
-                    </select>
-                    <select class="border" name="cboYear">
-                        <option value="0">a&ntilde;o</option>
-                    <?php for( $n=1933; $n<=date('Y'); $n++ ){?>
-                    <option value="<? echo $n;?>"><? echo $n;?>&nbsp;</option>
-                    <?php }?>
-                    </select>-->
+                    <span class="float-left">Plazo&nbsp;&nbsp;&nbsp;&nbsp;</span><div class="input2 border float-left">120 dias</div>
                 </div>
                 <div class="span-7 clear space-bottom">
                     <span>Todos los campos son obligatorios</span>

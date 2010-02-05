@@ -10,14 +10,17 @@
     <link type='text/css' href='js/simplemodal/css/basic_ie.css' rel='stylesheet' media='screen' />
     <![endif]-->
     <script type='text/javascript' src='js/simplemodal/js/jquery.simplemodal.js'></script>
-    <script type='text/javascript' src='js/simplemodal/js/basic.js'></script>
     <!--END SCRIPT-->
-<style media="print" type="text/css">
-div {display:none}
-</style> 
+
+    <script type='text/javascript' src='js/iso.js'></script>
+
+    <style media="print" type="text/css">
+    div {display:none}
+    </style>
 </head>
 
 <body>
+<div id="x1" class="x"><img src="images/blank.gif" alt="" width="150" height="250"></div>
 <div class="container">
     <?php include("includes/header_inc.php");?>
 

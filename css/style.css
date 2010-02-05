@@ -84,6 +84,8 @@ a.link1:hover{
 }
 .border{
   border:1px solid #68ACE5 !important;
+  background-color: #fff;
+  color:#000;
 }
 .input1{
     width:343px;
@@ -342,17 +344,54 @@ a.link1:hover{
 
 /*************************** Contacto ****************************/
 .contact{
-    background:url(../images/background_contact.png) no-repeat top center;
     height:275px;
     color:#1D3E6E;
 }
-    .contact .contact-form{
-        margin-top:10px;
+    .contact .btop{
+        background:url(../images/background_top_contact.png) no-repeat top center;
+        width:667px;
+        height:9px;
     }
-    .row-form{
+    .contact .bbottom{
+        clear:left;
+        background:url(../images/background_bottom_contact.png) no-repeat top center;
+        width:667px;
+        height:9px;
+    }
+    .contact .row-form{
+        position: relative;
         margin-top:20px;
     }
-    .contact-form .column-form{
-        margin:0 -5px 0 15px;
+    .contact .contact-form{
+        float:left;
+        clear:left;
+        background-color: #FAFAFA;
+        width:665px;
+        margin-left: 20px;
+        border-left: 1px solid #536C90;
+        border-right: 1px solid #536C90;
     }
+        .contact .contact-form .column-form{
+            margin:0 -5px 0 15px;
+        }
+        .contact .contact-form .message{
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size:120%;
+        }
  /***************************FIN Contacto ****************************/
+
+ .msgvalidator{
+     float:left;
+     clear: left;
+     top:56px;
+     /*width:268px;*/
+     padding:5px;
+     border: 2px solid #B0C0D3;
+     background-color: #fff;
+     color:red;
+     margin:-8px 0 12px;
+     z-index: 100;
+     display:none;
+}
