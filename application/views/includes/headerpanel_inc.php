@@ -1,5 +1,5 @@
     <div class="span-22 icon-menu">
-        <a href="<?=site_url('/index/');?>"><img src="images/icon_home.png" alt="Inicio"/></a>
+        <a href="<?=site_url('/empresa/');?>"><img src="images/icon_home.png" alt="Inicio"/></a>
         <a href="<?=site_url('/contacto/');?>"><img src="images/icon_contact.png" alt="Contacto"/></a>
     </div>
 
@@ -15,7 +15,7 @@
 
         <div class="clear span-22 last">
             <div class="span-10 prepend-1 logo">
-                <a href="<?=site_url('/index/');?>"><img src="images/logo_consurpyme.png" alt="Consurpyme Obras y Servicios de Ingeniería"/></a>
+                <a href="<?=site_url('/empresa/');?>"><img src="images/logo_consurpyme.png" alt="Consurpyme Obras y Servicios de Ingeniería"/></a>
             </div>
             <div class="span-10 last flash"></div>
         </div>

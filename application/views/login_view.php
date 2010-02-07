@@ -4,26 +4,7 @@
     <title>Consurpyme</title>
     <?php include("includes/head_inc.php");?>
 
-    <script type="text/javascript">
-    <!--
-        function validate(){
-            if( document.formLogin.txtLoginUser.value.length==0 ){
-                alert("Ingrese el nombre de Usuario.");
-                document.formLogin.txtLoginUser.focus();
-                return false;
-            }
-            if( document.formLogin.txtLoginPass.value.length==0 ){
-                alert("Ingrese la Contraseña.");
-                document.formLogin.txtLoginPass.focus();
-                return false;
-            }
-            return true;
-        }
-        $(document).ready(function(){
-            document.formLogin.txtLoginUser.focus();
-        });
-    -->
-    </script>
+    <script type="text/javascript" src="js/login.js"></script>
 </head>
 
 <body>
@@ -37,9 +18,9 @@
                 </div>
             <?php }?>
 
-            <form name="formLogin" action="<?=site_url('/login/');?>" method="post" onsubmit="return validate();">
+            <form id="formLogin" action="<?=site_url('/login/');?>" method="post" onsubmit="return validate();">
                 <div class="span-8 space-bottom"><span>Usuario</span><input class="login" type="text" name="txtLoginUser" /></div>
-                <div class="span-8 space-bottom"><span>Contraseña</span><input class="login" type="password" name="txtLoginPass" /></div>
+                <div class="span-8 space-bottom"><span>Contrase&ntilde;a</span><input class="login" type="password" name="txtLoginPass" /></div>
                 <div class="span-8 push-3 space-bottom"><input class="button1" type="submit" value="Entrar" /></div>
             </form>
         </div>

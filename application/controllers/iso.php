@@ -1,10 +1,10 @@
 <?php
 class Iso extends Controller{
-    function  __construct() {
+    function Iso() {
         parent::Controller();
     }
 
-    public function index(){
+    function index(){
         $this->load->view('iso_view');
     }
 }

@@ -19,6 +19,7 @@
 
 <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
 <script type="text/javascript" src="js/helpers.js"></script>
+<script type="text/javascript" src="js/init.php?index=<?=index_page();?>"></script>
 
 <!--[if IE 6]>
 <script type="text/javascript">

@@ -1,15 +1,14 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 class Proyect_model extends Model {
 
-
-    function  __construct() {
+    function  Proyect_model() {
         parent::Model();
     }
 
     /*
      * FUNCTIONS PUBLIC
      */
-    public function create($data = array()) {
+    function create($data = array()) {
 
         // INSERTA LOS DATOS
         if( !$this->db->insert(TBL_PROYECTS, $data) ) {
@@ -19,7 +18,7 @@ class Proyect_model extends Model {
         return "ok";
     }
 
-    public function update($data = array(), $proyect_id=null) {
+    function update($data = array(), $proyect_id=null) {
         if( !is_numeric($proyect_id) ) return false;
 
         // MODIFICA LOS DATOS
@@ -32,8 +31,8 @@ class Proyect_model extends Model {
         return "ok";
     }
 
-    public function delete($proyect_id) {
-        $this->db->where_in($proyect_id);
+    function delete($proyect_id) {
+        $this->db->where_in("proyect_id", $proyect_id);
         if( !$this->db->delete(TBL_PROYECTS) ){
             return false;
         }
@@ -41,13 +40,13 @@ class Proyect_model extends Model {
         return true;
     }
 
-    public function get_list(){
+    function get_list(){
         $this->db->order_by('proyect_id', 'desc');
         $this->db->order_by('client', 'asc');
         return $this->db->get(TBL_PROYECTS);
     }
 
-    public function get_proyect($proyect_id){
+    function get_proyect($proyect_id){
         if( !is_numeric($proyect_id) ) return false;
         $query = $this->db->get_where(TBL_PROYECTS, array("proyect_id"=>$proyect_id));
         return $query->row_array();

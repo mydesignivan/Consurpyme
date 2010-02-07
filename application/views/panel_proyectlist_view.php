@@ -50,10 +50,10 @@
                     <tr>
                         <td class="column-info span-0"><input type="checkbox" class="itemCheck" value="<?=$row['proyect_id'];?>" /></td>
                         <td class="column-info2 span-3"><?=$row['client'];?></td>
-                        <td class="column-info span-4"><?=character_limiter(nl2br($row['description']), 60);?></td>
+                        <td class="column-info span-4"><?=nl2br($row['description']);?></td>
                         <td class="column-info2 span-2"><?=$row['date_start'];?></td>
                         <td class="column-info span-2"><?=$row['date_end'];?></td>
-                        <td class="column-info2 span-2"><?=$row['date_plazo'];?></td>
+                        <td class="column-info2 span-2"><?=$row['plazo'];?></td>
                     </tr>
                 <?php }?>
                 </tbody>

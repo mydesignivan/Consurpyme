@@ -46,7 +46,7 @@
                     <?php foreach( $list->result_array() as $row ){?>
                         <tr>
                             <td class="span-0 column-info"><input type="checkbox" class="itemCheck" value="<?=$row['gallery_id'];?>" /></td>
-                            <td class="span-5 column-info2"><span><?=character_limiter(nl2br($row['title']), 60);?></span></td>
+                            <td class="span-5 column-info2"><span><?=$row['title'];?></span></td>
                             <td class="span-11-1 column-info"><span><?=character_limiter(nl2br($row['description']), 60);?></span></td>
                         </tr>
                     <?php }?>

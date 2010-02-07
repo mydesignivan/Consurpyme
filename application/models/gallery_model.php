@@ -1,7 +1,7 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 class Gallery_model extends Model {
 
-    function  __construct() {
+    function Gallery_model() {
         parent::Model();
         $this->load->helper('upload_helper');
     }
@@ -9,7 +9,7 @@ class Gallery_model extends Model {
     /*
      * FUNCTIONS PUBLIC
      */
-    public function create($data = array()) {
+    function create($data = array()) {
         $images_new = json_decode($data['images_new']);
 
         unset($data['images_new']);
@@ -38,7 +38,7 @@ class Gallery_model extends Model {
         return "ok";
     }
 
-    public function update($data = array(), $id=null) {
+    function update($data = array(), $id=null) {
         if( !is_numeric($id) ) return false;
 
         $images_new = json_decode($data['images_new']);
@@ -107,7 +107,7 @@ class Gallery_model extends Model {
         return "ok";
     }
 
-    public function delete($id) {
+    function delete($id) {
 
         // ELIMINA LAS IMAGENES
         $this->db->select('name, name_thumb');
@@ -128,20 +128,20 @@ class Gallery_model extends Model {
         return true;
     }
 
-    public function get_gallery($id){
+    function get_gallery($id){
         $this->db->select('gallery_id, title, description');
         $this->db->where('gallery_id', $id);
         $query = $this->db->get(TBL_GALLERY);
         return $query->row_array();
     }
 
-    public function get_list(){
+    function get_list(){
         $this->db->order_by('gallery_id', 'desc');
         $this->db->order_by('title', 'asc');
         return $this->db->get(TBL_GALLERY);
     }
 
-    public function get_listImages($id){
+    function get_listImages($id){
         $this->db->select("image_id");
         $this->db->select("CONCAT('".UPLOAD_DIR."',name_thumb) as image_thumb", false);
         $this->db->select("CONCAT('".UPLOAD_DIR."',name) as image_real", false);
@@ -156,15 +156,14 @@ class Gallery_model extends Model {
     /*
      * FUNCTION PRIVATE
      */
-     private function copy_images($images_new, $gallery_id){
+    function copy_images($images_new, $gallery_id){
         $user_id = $this->session->userdata('user_id');
         $prefix = $user_id."_";
         $data = array();
         foreach( $images_new as $name_original ){
             $name = preg_replace("/\s+/", "_", strtolower($name_original));
 
-
-            $filesource = file_search_special(UPLOAD_DIR_TMP, "/^".$user_id."\_.*\__".$name."$/");
+            $filesource = file_search_special(UPLOAD_DIR_TMP, $name);
 
             if( $filesource ){
                 $filename_dest = $prefix.$name;
@@ -180,10 +179,6 @@ class Gallery_model extends Model {
                     $name_original = $partf3['basename']."_copy".$n.".".$partf3['ext'];
                 }
 
-
-                /*echo $filesource."<br>";
-                echo UPLOAD_DIR.$filename_dest;
-                die();*/
                 if( !@copy($filesource, UPLOAD_DIR.$filename_dest) ){
                     return false;
                 }
@@ -206,9 +201,6 @@ class Gallery_model extends Model {
                     'gallery_id'=>$gallery_id
                 );
 
-            }else{
-                die("Si estas viendo este error, porfavor anotate, el nombre del archivo:<br>Nombre Archivo: ".$name);
-                return false;
             }
         }
 

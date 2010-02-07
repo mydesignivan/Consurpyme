@@ -19,7 +19,7 @@
 
     <div class="clear span-21 push-1 last content">
         <div class="proyecto span-19 push-1">
-            <form action="" name="form1" id="form1" method="post" enctype="application/x-www-form-urlencoded">
+            <form action="" id="form1" method="post" enctype="application/x-www-form-urlencoded">
                 <div class="span-10 space-bottom">
                     <span>T&iacute;tulo</span><input class="float-right input1 border" type="text" name="txtTitle" value="<?=@$data["title"];?>" />
                 </div>
@@ -58,6 +58,7 @@
     
                 <div class="span-7 clear space-bottom">
                     <a href="#" class="link1" onclick="Gallery.attach(this); return false;">Adjuntar otra im&aacute;gen.</a>
+                    <p>(JPG|GIF|PNG) 1.5MB max</p>
                 </div>
 
 

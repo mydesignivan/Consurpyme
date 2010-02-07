@@ -1,10 +1,10 @@
 <?php
 class Servicios extends Controller{
-    function  __construct() {
+    function Servicios() {
         parent::Controller();
     }
 
-    public function index(){
+    function index(){
         $this->load->view('servicios_view');
     }
 }

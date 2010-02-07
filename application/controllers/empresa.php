@@ -1,10 +1,10 @@
 <?php
-class Index extends Controller{
-    function  __construct() {
+class Empresa extends Controller{
+    function Empresa() {
         parent::Controller();
     }
 
-    public function index(){
+    function index(){
         $this->load->view('index_view');
     }
 }

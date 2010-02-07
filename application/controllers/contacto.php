@@ -1,17 +1,20 @@
 <?php
 class Contacto extends Controller{
-    function  __construct() {
+    function Contacto() {
         parent::Controller();
     }
 
-    public function index(){
+    /*
+     * FUNCTIONS PUBLIC
+     */
+    function index(){
         $this->load->view('contacto_view');
     }
 
-    public function send(){
+    function send(){
         if( $_SERVER['REQUEST_METHOD']=="POST" ){
             $this->load->library('email');
-
+            $this->load->model('users_model');
 
             if( !empty($_POST['txtLastName']) ){
                 $name = $_POST['txtFirstName'].", ".$_POST['txtLastName'];
@@ -27,7 +30,7 @@ class Contacto extends Controller{
                     );
 
             $this->email->from($_POST['txtEmail'], $name);
-            $this->email->to(EMAIL_CONTACT_TO);
+            $this->email->to($this->users_model->get_email());
             $this->email->subject(EMAIL_CONTACT_SUBJECT);
             $this->email->message($message);
             if( $this->email->send() ){

@@ -1,10 +1,10 @@
 <?php
 class Clientes extends Controller{
-    function  __construct() {
+    function  Clientes() {
         parent::Controller();
     }
 
-    public function index(){
+    function index(){
         $this->load->view('clientes_view');
     }
 }

@@ -9,20 +9,13 @@ var Gallery = new (function(){
                 if( this.value!="" ) arr_images_new.push(this.value);
             });
 
-            /*alert("new: "+arr_images_new);
-            alert("del: "+arr_images_delete);
-            alert("modid: "+arr_images_modified.id);
-            alert("modnam: "+arr_images_modified.name);
+            f.images_new.value = arrayToObject(arr_images_new);
+            f.images_deletes.value = arrayToObject(arr_images_delete);
+            f.images_modified_id.value = arrayToObject(arr_images_modified.id);
+            f.images_modified_name.value = arrayToObject(arr_images_modified.name);
 
-            return;*/
-
-            document.form1.images_new.value = arrayToObject(arr_images_new);
-            document.form1.images_deletes.value = arrayToObject(arr_images_delete);
-            document.form1.images_modified_id.value = arrayToObject(arr_images_modified.id);
-            document.form1.images_modified_name.value = arrayToObject(arr_images_modified.name);
-
-            document.form1.action = (document.form1.gallery_id.value=="") ? document.baseURI+"index.php/panel/gallery_create" : "index.php/panel/gallery_modified/"+document.form1.gallery_id.value;
-            document.form1.submit();
+            f.action = (f.gallery_id.value=="") ? baseURI+"panel/gallery_create" : "index.php/panel/gallery_modified/"+f.gallery_id.value;
+            f.submit();
         }
     };
 
@@ -61,6 +54,11 @@ var Gallery = new (function(){
     };
 
     this.remove_inputfile = function(el, image_id){            
+        if( working ){
+            alert("El servidor se encuentra ocupado.")
+            return false;
+        }
+        
         $(el).parent().remove();
         $('div.index-image').each(function(i){
             el.innerHTML = "Im&aacute;gen "+(i+1);
@@ -80,6 +78,7 @@ var Gallery = new (function(){
                 }
             }
         }
+        return false;
     };
 
     this.buttons = {
@@ -89,7 +88,7 @@ var Gallery = new (function(){
                 alert("Debe seleccionar un item para modificar.");
                 return false;
             }
-            location.href = document.baseURI+"index.php/panel/galleryform/"+items.val();
+            location.href = baseURI+"panel/galleryform/"+items.val();
 
             return false;
         },
@@ -123,12 +122,12 @@ var Gallery = new (function(){
     };
     var arr_images_new = new Array();
     var arr_images_delete = new Array();
+    var f=false;
 
     /*
      * METHODS PRIVATE
      */
     var validate = function(){
-        var f = document.form1;
         if( f.txtTitle.value.length==0 ){
             alert('Ingrese el campo "Título"');
             f.txtTitle.focus();
@@ -203,9 +202,10 @@ var Gallery = new (function(){
      * CONSTRUCTOR
      */
     $(document).ready(function(){
+        f = $('#form1')[0];
         auForm = $('#formAjaxUpload');
         auForm.attr('target', 'iframeUpload')
-              .attr('action', document.baseURI+"index.php/ajax_upload");
+              .attr('action', baseURI+"ajax_upload");
 
     });
 

@@ -8,15 +8,8 @@
     <link rel="stylesheet" type="text/css" href="js/jquery.fancybox/jquery.fancybox.css" media="screen" />
     <script type="text/javascript" src="js/jquery.fancybox/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="js/jquery.fancybox/jquery.fancybox-1.2.1.pack.js"></script>
-    <script type="text/javascript">
-    <!--
-        $(document).ready(function() {
-            $("a.image-fancybox").fancybox();
-        });
-    -->
-    </script>
+    <script type="text/javascript" src="js/jquery.fancybox/execute.js"></script>
     <!--END SCRIPT-->
-
 </head>
 
 <body>
@@ -39,13 +32,13 @@
                         <td class="column-table"><span>Fotos</span></td>
                     </tr>
                 </thead>
-                <tbody class="span-19">
+                <?php if( $listGallery->num_rows>0 ) {?><tbody class="span-19"><?php }?>
                 <?php
                 $n=0;
                 foreach( $listGallery->result_array() as $row ){$n++;?>
                     <tr>
-                        <td class="span-1 column-info vert-align-top"><span class="bold"><?=character_limiter($row['title'], 60);?></span></td>
-                        <td class="span-2-1 column-info2 vert-align-top"><span><?=character_limiter(nl2br($row['description'], 60));?></span></td>
+                        <td class="span-1 column-info vert-align-top"><span class="bold"><?=$row['title'];?></span></td>
+                        <td class="span-2-1 column-info2 vert-align-top"><span><?=nl2br($row['description']);?></span></td>
                         <td class="column-info3 column-info">
                             <ul>
                             <?php $listImages = $this->gallery_model->get_listImages($row['gallery_id']);
@@ -58,7 +51,7 @@
                         </td>
                     </tr>
             <?php }?>
-                </tbody>
+                <?php if( $listGallery->num_rows>0 ) {?></tbody><?php }?>
             </table>
             
         </div>

@@ -21,7 +21,7 @@
             <div class="span-17 prepend-1 btop"></div>
             <div class="contact-form">
                 <?php if( !$this->session->flashdata('status_send') ){?>
-                <form name="form1" action="<?=site_url('/contacto/send/');?>" method="post" enctype="application/x-www-form-urlencoded">
+                <form id="form1" action="<?=site_url('/contacto/send/');?>" method="post" enctype="application/x-www-form-urlencoded">
                     <div class="column-form span-8">
                         <div class="row-form"><span>*Nombre:</span><br/>
                             <div class="input4"><input type="text" name="txtFirstName" /></div>
@@ -48,6 +48,8 @@
                             <div class="msgvalidator"></div>
                         </div>
                     </div>
+
+                    <div class="span-8 clear legend">(*) Campos obligatorios.</div>
                     <div class="span-3 clear prepend-7">
                         <input class="button3" type="button" value="Enviar" onclick="Contact.send();" />
                     </div>

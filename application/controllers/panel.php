@@ -1,6 +1,6 @@
 <?php
 class Panel extends Controller{
-    function  __construct() {
+    function Panel() {
         parent::Controller();
         $this->load->library("simplelogin");
         if( !$this->session->userdata('logged_in') ) redirect('/login/');
@@ -10,16 +10,16 @@ class Panel extends Controller{
     /*
      * FUNCTIONS PUBLIC
      */
-    public function index(){
+    function index(){
         $this->proyectos();
     }
 
-    public function proyectos(){
+    function proyectos(){
         $this->load->model('proyect_model');
         $data = $this->proyect_model->get_list();
         $this->load->view('panel_proyectlist_view', array('listProyects'=>$data));
     }
-    public function proyectform(){
+    function proyectform(){
         if( $this->uri->segment(3)!="" ){
             $this->load->model('proyect_model');
             $data = $this->proyect_model->get_proyect($this->uri->segment(3));
@@ -30,7 +30,7 @@ class Panel extends Controller{
         }
         $this->load->view('panel_proyectform_view', array("data"=>$data, "title"=>$title));
     }
-    public function proyect_create(){
+    function proyect_create(){
         if( $_SERVER['REQUEST_METHOD']=="POST" ){
             $this->load->model('proyect_model');
 
@@ -43,7 +43,7 @@ class Panel extends Controller{
             }
         }
     }
-    public function proyect_modified(){
+    function proyect_modified(){
         if( $_SERVER['REQUEST_METHOD']=="POST" ){
             $this->load->model('proyect_model');
 
@@ -56,7 +56,7 @@ class Panel extends Controller{
             }
         }
     }
-    public function proyect_delete(){
+    function proyect_delete(){
         $id = $this->get_id();
         if( count($id)>0 ){
             $this->load->model('proyect_model');
@@ -70,12 +70,12 @@ class Panel extends Controller{
 
 
 
-    public function galeria(){
+    function galeria(){
         $this->load->model('gallery_model');
         $result = $this->gallery_model->get_list();
         $this->load->view('panel_gallery_view', array('list'=>$result));
     }
-    public function galleryform(){
+    function galleryform(){
         $this->load->model('gallery_model');
         if( !$this->uri->segment(3) ){
             $data = array();
@@ -88,7 +88,7 @@ class Panel extends Controller{
         }
         $this->load->view('panel_galleryform_view', array('data'=>$data, 'title'=>$title, 'listImages'=>$resultGallery));
     }
-    public function gallery_create(){
+    function gallery_create(){
         if( $_SERVER['REQUEST_METHOD']=="POST" ){
             $this->load->model('gallery_model');
 
@@ -101,7 +101,7 @@ class Panel extends Controller{
             }
         }
     }
-    public function gallery_modified(){
+    function gallery_modified(){
         if( $_SERVER['REQUEST_METHOD']=="POST" ){
             $this->load->model('gallery_model');
             
@@ -119,7 +119,7 @@ class Panel extends Controller{
             }
         }
     }
-    public function gallery_delete(){
+    function gallery_delete(){
         $id = $this->get_id();
         if( count($id)>0 ){
             $this->load->model('gallery_model');
@@ -132,17 +132,19 @@ class Panel extends Controller{
     }
 
 
-    public function micuenta(){
+    function micuenta(){
         $this->load->model('users_model');
         $this->load->view('panel_account_view');
     }
-    public function myaccount_modified(){
+    function myaccount_modified(){
         $this->load->model('users_model');
         $this->load->library('encpss');
         $data = array(
-            'username'=>$_POST['txtUser'],
-            'password'=>$this->encpss->encode($_POST['txtPass']),
+            'username' => $_POST['txtUser'],
+            'email'    => $_POST['txtEmail'],
+            'password' => $this->encpss->encode($_POST['txtPass']),
         );
+        
         $status = $this->users_model->update($data);
         if( $status=="ok" ){
             redirect('/login/logout');
@@ -157,24 +159,23 @@ class Panel extends Controller{
     /*
      * FUNCTIONS PRIVATE
      */
-    private function request_fields(){
+    function request_fields(){
         return array(
             'client'        =>  $_POST['txtClient'],
             'description'   =>  $_POST['txtDescription'],
             'date_start'    =>  $_POST['txtDateStart'],
             'date_end'      =>  $_POST['txtDateEnd'],
-            'date_plazo'    =>  $_POST['txtDatePlazo'],
-            'plazo_text'    =>  $_POST['txtPlazoText']
+            'plazo'         =>  $_POST['plazo']
         );
     }
-    private function request_fields2(){
+    function request_fields2(){
         return array(
             'title'                 =>  $_POST['txtTitle'],
             'description'           =>  $_POST['txtDescription'],
             'images_new'            =>  $_POST['images_new']
         );
     }
-    private function get_id(){
+    function get_id(){
         $id = array();
         for( $n=3; $n<=$this->uri->total_segments(); $n++ ){
             $seg = $this->uri->segment($n);
@@ -183,7 +184,5 @@ class Panel extends Controller{
         return $id;
     }
 
-
 }
-
 ?>

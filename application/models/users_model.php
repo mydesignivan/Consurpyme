@@ -1,15 +1,17 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 class Users_model extends Model {
 
-
-    function  __construct() {
+    function  Users_model() {
         parent::Model();
     }
 
     /*
      * FUNCTIONS PUBLIC
      */
-    public function update($data = array()) {
+    function update($data = array()) {
+
+        if( empty($data['password']) ) unset($data['password']);
+
         // MODIFICA LOS DATOS
         $this->db->where('user_id', $this->session->userdata('user_id'));
 
@@ -18,6 +20,13 @@ class Users_model extends Model {
         }
 
         return "ok";
+    }
+
+    function get_email(){
+        $this->db->select('email');
+        $query = $this->db->get(TBL_USERS);
+        $row = $query->row_array();
+        return $row['email'];
     }
 
 }

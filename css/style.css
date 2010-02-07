@@ -122,6 +122,12 @@ a.link1:hover{
     height:50px;
     width:275px;
 }
+.input-plazo{
+    float:left;
+    width:auto;
+    padding-left: 2px;
+    padding-right: 7px;
+}
 .textarea1{
     width:375px;
     height:60px;
@@ -394,4 +400,11 @@ a.link1:hover{
      margin:-8px 0 12px;
      z-index: 100;
      display:none;
+}
+
+.legend{
+    font-size: 90%;
+    font-weight: bold;
+    text-align: left;
+    margin-left:16px;
 }

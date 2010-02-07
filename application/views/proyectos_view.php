@@ -29,10 +29,10 @@
                 <?php foreach( $listProyects->result_array() as $row ){?>
                     <tr>
                         <td class="span-3 column-info"><span class="bold"><?=$row['client'];?></span></td>
-                        <td class="span-4 column-info2"><span><?=character_limiter(nl2br($row['description']), 60);?></span></td>
+                        <td class="span-4 column-info2"><span><?=nl2br($row['description']);?></span></td>
                         <td class="span-2 column-info"><span><?=$row['date_start'];?></span></td>
                         <td class="span-2 column-info2"><span><?=$row['date_end'];?></span></td>
-                        <td class="span-2 column-info"><span><?=$row['date_plazo'];?></span></td>
+                        <td class="span-2 column-info"><span><?=$row['plazo'];?></span></td>
                     </tr>
                 <?php }?>
                 </tbody>

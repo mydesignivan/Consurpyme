@@ -63,10 +63,13 @@ define('ERR_EMAIL_NOTSEND', 'El email no ha podido ser enviado.');
 */
 define('UPLOAD_DIR', './uploads/');
 define('UPLOAD_DIR_TMP', './uploads/tmp/');
-define('UPLOAD_WIDTH', 107);
-define('UPLOAD_HEIGHT', 90);
 define('UPLOAD_FILETYPE', 'gif|jpg|png');
-define('UPLOAD_MAXSIZE', 1024); //Expresado en Kylobytes
+define('UPLOAD_MAXSIZE', 1536); //Expresado en Kylobytes
+
+define('IMAGE_THUMB_WIDTH', 107);
+define('IMAGE_THUMB_HEIGHT', 90);
+define('IMAGE_ORIGINAL_WIDTH', 800);
+define('IMAGE_ORIGINAL_HEIGHT', 600);
 
 
 /*
@@ -74,7 +77,6 @@ define('UPLOAD_MAXSIZE', 1024); //Expresado en Kylobytes
 | EMAIL (FORMULARIO DE CONSULTA)
 |--------------------------------------------------------------------------
 */
-define('EMAIL_CONTACT_TO', 'ivan@mydesign.com.ar');
 define('EMAIL_CONTACT_SUBJECT', 'www.consurpyme.com.ar - Formulario de consulta');
 define('EMAIL_CONTACT_MESSAGE', '<b>Nombre y Apellido:</b> %s<br><b>Asunto:</b> %s<br><b>Horario de contacto:</b> %s<br><b>Email:</b> %s<br><b>Mensaje:</b><hr color="#000000" />%s');
 

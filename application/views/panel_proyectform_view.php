@@ -23,7 +23,7 @@
 
     <div class="clear span-21 push-1 last content">
         <div class="proyecto span-19 push-1">
-            <form action="" name="form1" method="post" enctype="application/x-www-form-urlencoded">
+            <form action="" id="form1" method="post" enctype="application/x-www-form-urlencoded">
                 <div class="span-10 space-bottom">
                     <span>Cliente</span><input class="float-right input1 border" type="text" name="txtClient" value="<?=@$data["client"];?>" />
                 </div>
@@ -32,13 +32,13 @@
                     <textarea class="textarea1 border" rows="5" cols="20" name="txtDescription"><?=@$data["description"];?></textarea>
                 </div>
                 <div class="span-4 space-bottom clear">
-                    <span>Inicio &emsp;</span><input class="input2 border" type="text" name="txtDateStart" value="<?=@$data["date_start"];?>" />
+                    <span>Inicio &emsp;</span><input class="input2 border" type="text" name="txtDateStart" id="txtDateStart" value="<?=@$data["date_start"];?>" />
                 </div>
                 <div class="span-4 space-bottom">
-                    <span>Fin &emsp;</span><input class="input2 border" type="text" name="txtDateEnd" value="<?=@$data["date_end"];?>" />
+                    <span>Fin &emsp;</span><input class="input2 border" type="text" name="txtDateEnd" id="txtDateEnd" value="<?=@$data["date_end"];?>" />
                 </div>
                 <div class="span-9 space-bottom clear">
-                    <span class="float-left">Plazo&nbsp;&nbsp;&nbsp;&nbsp;</span><div class="input2 border float-left">120 dias</div>
+                    <span class="float-left">Plazo&nbsp;&nbsp;&nbsp;&nbsp;</span><div class="input-plazo border" id="divPlazo">&nbsp;</div>
                 </div>
                 <div class="span-7 clear space-bottom">
                     <span>Todos los campos son obligatorios</span>
@@ -48,6 +48,7 @@
                     <input class="button2" type="button" value="Cancelar" onclick="javascript:location.href='<?=site_url('/panel/proyectos/');?>';" />
                 </div>
                 <input type="hidden" name="proyect_id" value="<?=@$data["proyect_id"];?>" />
+                <input type="hidden" name="plazo" value="<?=@$data["plazo"];?>" />
             </form>
         </div>
     </div>

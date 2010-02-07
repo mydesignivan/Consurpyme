@@ -2,13 +2,16 @@
 
 class Login extends Controller{
 
-    function __construct(){
+    function Login(){
         parent::Controller();
         $this->load->library("simplelogin");
         $this->load->library("encpss");
     }
 
-    public function index(){
+    /*
+     * FUNCTIONS PUBLIC
+     */
+    function index(){
         if( $this->session->userdata('logged_in') ) redirect('/panel/');
         $status=0;
         if( $_SERVER['REQUEST_METHOD']=="POST" ){
@@ -22,7 +25,7 @@ class Login extends Controller{
         $this->load->view('login_view', array('loginfaild'=>$status));
     }
 
-    public function logout(){
+    function logout(){
         $this->simplelogin->logout();
         redirect('/panel/');
     }

@@ -9,8 +9,8 @@ $(document).ready(function(){
 	e.preventDefault();
 
         $('#simplemodal-window').modal({
-            maxHeight: 600
+            maxHeight: $(window).height()-90
         });
     });
-
+    $('div.center-certificado').css('cursor', 'pointer');
 });

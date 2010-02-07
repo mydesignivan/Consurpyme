@@ -41,7 +41,7 @@ var Contact = new (function(){
      * CONSTRUCTOR
      */
     $(document).ready(function(){
-        f = document.form1;
+        f = $('#form1')[0];
 
         $(f.txtFirstName).blur(function(){
             if( this.value.length=="" ){
