@@ -38,7 +38,13 @@
                     <span>Fin &emsp;</span><input class="input2 border" type="text" name="txtDateEnd" id="txtDateEnd" value="<?=@$data["date_end"];?>" />
                 </div>
                 <div class="span-9 space-bottom clear">
-                    <span class="float-left">Plazo&nbsp;&nbsp;&nbsp;&nbsp;</span><div class="input-plazo border" id="divPlazo">&nbsp;</div>
+                    <span class="float-left">Plazo&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <input class="input-plazo border" type="text" name="txtPlazo" value="<?=@$data["plazo"];?>" />
+                    <select name="cboPlazoUnit">
+                        <option value="d&iacute;as" <?php if( @$data["plazo_unit"]=="días" ) echo 'selected="selected"';?>>D&iacute;as</option>
+                        <option value="meses" <?php if( @$data["plazo_unit"]=="meses" ) echo 'selected="selected"';?>>Meses</option>
+                        <option value="a&ntilde;os" <?php if( @$data["plazo_unit"]=="años" ) echo 'selected="selected"';?>>A&ntilde;os</option>
+                    </select>
                 </div>
                 <div class="span-7 clear space-bottom">
                     <span>Todos los campos son obligatorios</span>

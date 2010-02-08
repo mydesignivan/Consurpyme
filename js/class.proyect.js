@@ -1,3 +1,5 @@
+//        alert(baseURI);
+
 var Proyect = new (function(){
 
     /*
@@ -34,7 +36,7 @@ var Proyect = new (function(){
                     proyect_id+=this.value+"/";
                 });
                 proyect_id = proyect_id.substr(0, proyect_id.length-1);
-                location.href = "index.php/panel/proyect_delete/"+escape(proyect_id);
+                location.href = baseURI+"panel/proyect_delete/"+escape(proyect_id);
             }
             return false;
         }
@@ -70,24 +72,13 @@ var Proyect = new (function(){
             f.txtDateEnd.focus();
             return false;
         }
+        if( f.txtPlazo.value.length==0 ){
+            alert('Ingrese el campo "Plazo"');
+            f.txtPlazo.focus();
+            return false;
+        }
 
         return true;
-    };
-
-    var show_plazo = function(){
-        var d1 = $('#txtDateStart').val();
-        var d2 = $('#txtDateEnd').val();
-
-        if( d1!="" && d2!="" ){
-            $.post(baseURI+'proyectos/get_date_diff/', {date1:d1, date2:d2}, function(data){
-                if( data=="error" ){
-                    alert("La Fecha Fin debe ser mayor a la Fecha de Inicio.");
-                }else{
-                    $('#divPlazo').html(data);
-                    f.plazo.value = data;
-                }
-            });
-        }
     };
 
     /*
@@ -98,11 +89,8 @@ var Proyect = new (function(){
 
         if(typeof f!="undefined" ){
             $('#txtDateStart, #txtDateEnd').datepicker({
-                dateFormat : 'dd/mm/yy',
-                onClose : show_plazo
+                dateFormat : 'dd/mm/yy'
             });
-
-            show_plazo();
         }
     });
 

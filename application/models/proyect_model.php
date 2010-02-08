@@ -41,6 +41,8 @@ class Proyect_model extends Model {
     }
 
     function get_list(){
+        $this->db->select('proyect_id, client, description, date_start, date_end');
+        $this->db->select("CONCAT(plazo, ' ', plazo_unit) as plazo", false);
         $this->db->order_by('proyect_id', 'desc');
         $this->db->order_by('client', 'asc');
         return $this->db->get(TBL_PROYECTS);

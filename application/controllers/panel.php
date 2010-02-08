@@ -165,7 +165,8 @@ class Panel extends Controller{
             'description'   =>  $_POST['txtDescription'],
             'date_start'    =>  $_POST['txtDateStart'],
             'date_end'      =>  $_POST['txtDateEnd'],
-            'plazo'         =>  $_POST['plazo']
+            'plazo'         =>  $_POST['txtPlazo'],
+            'plazo_unit'    =>  $_POST['cboPlazoUnit']
         );
     }
     function request_fields2(){

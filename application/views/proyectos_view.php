@@ -32,7 +32,7 @@
                         <td class="span-4 column-info2"><span><?=nl2br($row['description']);?></span></td>
                         <td class="span-2 column-info"><span><?=$row['date_start'];?></span></td>
                         <td class="span-2 column-info2"><span><?=$row['date_end'];?></span></td>
-                        <td class="span-2 column-info"><span><?=$row['plazo'];?></span></td>
+                        <td class="span-2 column-info"><span><?=utf8_encode($row['plazo']);?></span></td>
                     </tr>
                 <?php }?>
                 </tbody>

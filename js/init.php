@@ -1,5 +1,5 @@
 <?php
 
-echo 'var baseURI = document.baseURI+"'. $_GET["index"] .'/";';
+echo 'var baseURI = $("base").attr("href")+"'. $_GET["index"] .'/";';
 
 ?>

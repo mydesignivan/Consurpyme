@@ -123,10 +123,8 @@ a.link1:hover{
     width:275px;
 }
 .input-plazo{
-    float:left;
-    width:auto;
-    padding-left: 2px;
-    padding-right: 7px;
+   width:50px;
+   text-align: center;
 }
 .textarea1{
     width:375px;

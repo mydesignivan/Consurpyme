@@ -53,7 +53,7 @@
                         <td class="column-info span-4"><?=nl2br($row['description']);?></td>
                         <td class="column-info2 span-2"><?=$row['date_start'];?></td>
                         <td class="column-info span-2"><?=$row['date_end'];?></td>
-                        <td class="column-info2 span-2"><?=$row['plazo'];?></td>
+                        <td class="column-info2 span-2"><?=utf8_encode($row['plazo']);?></td>
                     </tr>
                 <?php }?>
                 </tbody>

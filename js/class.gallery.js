@@ -37,19 +37,19 @@ var Gallery = new (function(){
 
     this.upload = function(el){
         if( working ){
-            alert("El servidor se encuentra ocupado.")
+            alert("El servidor se encuentra ocupado.");
             return false;
         }
         working=true;
-        ajax_loader.show(el);
+        auDiv = $(el).parent();
 
-        $(el).parent().find("input:hidden").val(el.value);
+        ajax_loader.show();
 
         auForm.empty()
-              .append(create_iframe(el))
-              .append($(el).clone())
+              .append(create_iframe())
+              .append($(el))
               .submit();
-              
+        
         return false;
     };
 
@@ -105,7 +105,7 @@ var Gallery = new (function(){
                     id+=this.value+"/";
                 });
                 id = id.substr(0, id.length-1);
-                location.href = "index.php/panel/gallery_delete/"+escape(id);
+                location.href = baseURI+"panel/gallery_delete/"+escape(id);
             }
             return false;
         }
@@ -115,6 +115,7 @@ var Gallery = new (function(){
      * PROPERTIES PRIVATE
      */
     var auForm = false;
+    var auDiv = false;
     var working = false;
     var arr_images_modified = {
         id : Array(),
@@ -146,25 +147,29 @@ var Gallery = new (function(){
         return true;
     };
 
-    var upload_success = function(input){
+    var upload_success = function(){
         var content = this.contentDocument ? this.contentDocument.body.innerHTML : frames[0].document.body.innerHTML;
 
         if( /^(filename:)/.test(content) ){
             var filename = content.substr(9);
 
-            var div = $(input).parent().find(':first');
-            var img = div.find('img');
+            auDiv.find(':first').after('<input type="file" class="float-left border" size="22" name="uploadFile" onchange="Gallery.upload(this);" />');
+
+            var img = auDiv.find('.ajaxupload-image');
             if( img.length==0 ){
-                div.html('<img src="'+ filename +'" alt="" class="ajaxupload-image" />');
+                auDiv.find('.index-image').html('<img src="'+ filename +'" alt="" class="ajaxupload-image" />');
             }else{
                 img.attr('src', filename);
             }
 
-            if( input.id ){
-                add_image_modified(parseInt(input.id.substr(2)), input.value);
+            var input = auForm.find('input:file');
+            auDiv.find("input:hidden").val(input.val());
+
+            if( input.attr('id')!="" ){
+                add_image_modified(parseInt(input.attr('id').substr(2)), input.val());
             }
 
-            ajax_loader.hidden(input);
+            ajax_loader.hidden();
 
         }else{
             alert(content);
@@ -175,17 +180,17 @@ var Gallery = new (function(){
 
     var ajax_loader ={
         show : function(input){
-            $(input).parent().find('.ajax-loader').show();
+            auDiv.find('.ajax-loader').show();
         },
         hidden : function(input){
-            $(input).parent().find('.ajax-loader').hide();
+            auDiv.find('.ajax-loader').hide();
         }
     }
 
-    var create_iframe = function(el){
-        var iframe = $('<iframe name="iframeUpload" id="iframeUpload" src="about:blank" width="400" height="100" class="display-hidden"></iframe>');
-            iframe.attr('src', '')
-            iframe.bind('load', function(){upload_success(el)});
+    var create_iframe = function(){
+        var iframe = $('<iframe name="iframeUpload" id="iframeUpload" src="" width="400" height="100" class="display-hidden"></iframe>');
+            iframe.hide()
+            iframe.bind('load', upload_success);
         return iframe;
     };
 
