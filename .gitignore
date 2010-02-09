@@ -3,6 +3,8 @@ application/config/database.php
 nbproject/*
 uploads/*
 _website_old/*
+_documentacion/*
+_backup/*
 db.txt
 .htaccess
 htaccess
