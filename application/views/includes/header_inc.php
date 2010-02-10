@@ -19,6 +19,11 @@
             <div class="span-10 prepend-1 logo">
                 <a href="<?=site_url('/empresa/');?>"><img src="images/logo_consurpyme.png" alt="Consurpyme Obras y Servicios de Ingeniería"/></a>
             </div>
-            <div class="span-10 last flash"></div>
+            <div class="span-10 last flash">
+                <object type="application/x-shockwave-flash" data="images/index.swf" width="390" height="245">
+                    <param name="movie" value="images/index.swf" />
+                    <param name="wmode" value="transparent" />
+                </object>
+            </div>
         </div>
     </div>

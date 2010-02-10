@@ -21,7 +21,7 @@
             <form id="formLogin" action="<?=site_url('/login/');?>" method="post" onsubmit="return validate();">
                 <div class="span-8 space-bottom"><span>Usuario</span><input class="login" type="text" name="txtLoginUser" /></div>
                 <div class="span-8 space-bottom"><span>Contrase&ntilde;a</span><input class="login" type="password" name="txtLoginPass" /></div>
-                <div class="span-8 push-3 space-bottom"><input class="button1" type="submit" value="Entrar" /></div>
+                <div class="span-8 space-bottom3"><input class="button1" type="submit" value="Entrar" /></div>
             </form>
         </div>
     </div>

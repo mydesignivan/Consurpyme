@@ -15,7 +15,7 @@
 
     <div class="clear span-21 push-1 last content">
         <div class="span-19 push-1">
-            <table class="span-18 table-proyect">
+            <table class="span-18 table-proyect" cellspacing="0">
                 <thead>
                     <tr class="top-table">
                         <td class="span-3 column-table" ><span>Cliente</span></td>

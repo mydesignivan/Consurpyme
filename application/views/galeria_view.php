@@ -24,7 +24,7 @@
         <div class="span-19 prepend-1">
             
 
-            <table class="span-19 table-proyect">
+            <table class="span-19 table-proyect" cellspacing="0">
                 <thead>
                     <tr class="top-table">
                         <td class="span-1 column-table" ><span>Cliente</span></td>

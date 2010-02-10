@@ -21,15 +21,15 @@
         </div>
         <div class="span-20 list-services">
             <ul>
-                <li class="list"><span class="bold">Construcción de redes y gasoductos para gas natural industriales, montaje de plantas reguladoras.</span></li>
-                <li class="list2"><span class="bold">Obras civiles</span> <span>para educación, vivienda, industria, comercio y otros destinos.</span></li>
-                <li class="list"><span class="bold">Obras civiles de telefon&iacute;a y transmisión de datos</span>, <span>utilizando tecnolog&iacute;as de instalaci&oacute;n de bajo impacto ambiental, tales como la PHD (Perforaci&oacute;n Horizontal Dirigida).</span></li>
-                <li class="list2"><span class="bold">Montaje de plantas reguladoras</span><span> y otros trabajos vinculados a la industria del gas natural.</span></li>
-                <li class="list"><span class="bold">Saneamiento, agua potable y sistemas de alumbrado.</span></li>
-                <li class="list2"><span class="bold">Servicios profesionales:</span><span> estudio de licitaciones, presupuestaci&oacute;n y armado de ofertas, asesoramiento t&eacute;cnico, inspecci&oacute;n de obras , relevamiento y reingenier&iacute;a de procesos.</span></li>
-                <li class="list"><span class="bold">Evaluaci&oacute;n de impacto ambiental y Sistemas de Gesti&oacute;n Ambiental seg&uacute;n ISO 14000.</span></li>
-                <li class="list2"><span class="bold">Sistemas de Gesti&oacute;n de la Calidad seg&uacute;n ISO 9001.</span></li>
-                <li class="list"><span class="bold">Servicios de Higiene y Seguridad Laboral:</span><span> elaboraci&oacute;n de programas de seguridad, capacitaci&oacute;n de personal, identificaci&oacute;n de riesgos laborales, implementaci&oacute;n de medidas de mitigaci&oacute;n, investigaci&oacute;n de accidentes, protecci&oacute;n contra incendios y confecci&oacute;n de estad&iacute;sticas e informes anuales.</span></li>
+                <li class="list"><img src="images/image_list.jpg" alt="" /><span class="bold">Construcción de redes y gasoductos para gas natural industriales, montaje de plantas reguladoras.</span></li>
+                <li class="list2"><img src="images/image_list2.jpg" alt="" /><span class="bold">Obras civiles</span> <span>para educación, vivienda, industria, comercio y otros destinos.</span></li>
+                <li class="list"><img src="images/image_list.jpg" alt="" /><span class="bold">Obras civiles de telefon&iacute;a y transmisión de datos</span>, <span>utilizando tecnolog&iacute;as de instalaci&oacute;n de bajo impacto ambiental, tales como la PHD (Perforaci&oacute;n Horizontal Dirigida).</span></li>
+                <li class="list2"><img src="images/image_list2.jpg" alt="" /><span class="bold">Montaje de plantas reguladoras</span><span> y otros trabajos vinculados a la industria del gas natural.</span></li>
+                <li class="list"><img src="images/image_list.jpg" alt="" /><span class="bold">Saneamiento, agua potable y sistemas de alumbrado.</span></li>
+                <li class="list2"><img src="images/image_list2.jpg" alt="" /><span class="bold">Servicios profesionales:</span><span> estudio de licitaciones, presupuestaci&oacute;n y armado de ofertas, asesoramiento t&eacute;cnico, inspecci&oacute;n de obras , relevamiento y reingenier&iacute;a de procesos.</span></li>
+                <li class="list"><img src="images/image_list.jpg" alt="" /><span class="bold">Evaluaci&oacute;n de impacto ambiental y Sistemas de Gesti&oacute;n Ambiental seg&uacute;n ISO 14000.</span></li>
+                <li class="list2"><img src="images/image_list2.jpg" alt="" /><span class="bold">Sistemas de Gesti&oacute;n de la Calidad seg&uacute;n ISO 9001.</span></li>
+                <li class="list"><img src="images/image_list.jpg" alt="" /><span class="bold">Servicios de Higiene y Seguridad Laboral:</span><span> elaboraci&oacute;n de programas de seguridad, capacitaci&oacute;n de personal, identificaci&oacute;n de riesgos laborales, implementaci&oacute;n de medidas de mitigaci&oacute;n, investigaci&oacute;n de accidentes, protecci&oacute;n contra incendios y confecci&oacute;n de estad&iacute;sticas e informes anuales.</span></li>
             </ul>
         </div>
         <div class="span-19 list-services prepend-1">

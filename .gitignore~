@@ -1,0 +1,9 @@
+application/config/config.php
+application/config/database.php
+nbproject/*
+uploads/*
+_website_old/*
+db.txt
+.htaccess
+htaccess
+htaccess.txt

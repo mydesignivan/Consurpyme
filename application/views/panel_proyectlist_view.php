@@ -32,7 +32,7 @@
                 </div>
 
             <?php }else{?>
-            <table class="span-18 table-proyect">
+            <table class="span-18 table-proyect" cellspacing="0">
                 <thead>
                     <tr class="top-table">
                         <td class="span-0 column-table">&nbsp;</td>

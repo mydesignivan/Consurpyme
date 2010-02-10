@@ -1,0 +1,12 @@
+.menu{
+        margin-left:-5px;
+    }
+.menu li{
+        display:inline;
+        margin-left: 5px;
+        text-align:center;
+        float: left;
+    }
+.sidebar .image-iso .bottom-certificado .icon-view img{
+     margin-top:-30px;
+}
