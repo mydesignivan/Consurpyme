@@ -25,20 +25,20 @@
         <div class="proyecto span-19 push-1">
             <form action="" id="form1" method="post" enctype="application/x-www-form-urlencoded">
                 <div class="span-10 space-bottom">
-                    <span>Cliente</span><input class="float-right input1 border" type="text" name="txtClient" value="<?=@$data["client"];?>" />
+                    <span>*Cliente</span><input class="float-right input1 border" type="text" name="txtClient" value="<?=@$data["client"];?>" />
                 </div>
                 <div class="span-7 clear space-bottom">
-                    <span>Descripci&oacute;n</span><br/>
+                    <span>*Descripci&oacute;n</span><br/>
                     <textarea class="textarea1 border" rows="5" cols="20" name="txtDescription"><?=@$data["description"];?></textarea>
                 </div>
                 <div class="span-4 space-bottom clear">
-                    <span>Inicio &emsp;</span><input class="input2 border" type="text" name="txtDateStart" id="txtDateStart" value="<?=@$data["date_start"];?>" />
+                    <span>*Inicio &emsp;</span><input class="input2 border" type="text" name="txtDateStart" id="txtDateStart" value="<?=@$data["date_start"];?>" />
                 </div>
                 <div class="span-4 space-bottom">
                     <span>Fin &emsp;</span><input class="input2 border" type="text" name="txtDateEnd" id="txtDateEnd" value="<?=@$data["date_end"];?>" />
                 </div>
                 <div class="span-9 space-bottom clear">
-                    <span class="float-left">Plazo&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span class="float-left">*Plazo&nbsp;&nbsp;&nbsp;&nbsp;</span>
                     <input class="input-plazo border" type="text" name="txtPlazo" value="<?=@$data["plazo"];?>" />
                     <select name="cboPlazoUnit">
                         <option value="d&iacute;as" <?php if( @$data["plazo_unit"]=="días" ) echo 'selected="selected"';?>>D&iacute;as</option>
@@ -47,7 +47,7 @@
                     </select>
                 </div>
                 <div class="span-7 clear space-bottom">
-                    <span>Todos los campos son obligatorios</span>
+                    <span>(*) Campos obligatorios</span>
                 </div>
                 <div class="span-7 clear space-bottom">
                     <input class="button2" type="button" value="Guardar" onclick="Proyect.save();" />

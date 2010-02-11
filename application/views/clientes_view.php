@@ -20,16 +20,16 @@
                 <li><img src="images/cliente_2.jpg" alt="Banco Patagonia"/></li>
                 <li><img src="images/cliente_16.jpg" alt="Camuzzi Gas Pampeano"/></li>
                 <li><img src="images/cliente_12.jpg" alt="Edes"/></li>
-                
+                <li><img src="images/cliente_21.jpg" alt="Patagonia Norte"/></li>
             </ul>
         </div>
         <div class="column span-5">
             <ul>
-                <li><img src="images/cliente_22.gif" alt="Inspectorate"/></li>
+                <li><img src="images/cliente_22.jpg" alt="Universidad Nacional del Sur"/></li>
                 <li><img src="images/cliente_6.jpg" alt="Inspectorate"/></li>
                 <li><img src="images/cliente_7.jpg" alt="Frigorífico Pilotti"/></li>
                 <li><img src="images/cliente_8.jpg" alt="Instituto Riviere"/></li>
-                
+                <li><img src="images/cliente_23.jpg" alt="Laprida"/></li>
             </ul>
         </div>
         <div class="column span-5">
@@ -38,6 +38,7 @@
                 <li><img src="images/cliente_14.jpg" alt="Consolidar"/></li>
                 <li><img src="images/cliente_5.jpg" alt="Profertil"/></li>
                 <li><img src="images/cliente_15.jpg" alt="Profru"/></li>
+                <li><img src="images/cliente_20.jpg" alt="Toepfer"/></li>
             </ul>
         </div>
         <div class="column span-5 last">

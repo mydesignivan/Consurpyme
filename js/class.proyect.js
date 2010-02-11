@@ -67,11 +67,6 @@ var Proyect = new (function(){
             f.txtDateStart.focus();
             return false;
         }
-        if( f.txtDateEnd.value.length==0 ){
-            alert('Ingrese el campo "Fecha Fin"');
-            f.txtDateEnd.focus();
-            return false;
-        }
         if( f.txtPlazo.value.length==0 ){
             alert('Ingrese el campo "Plazo"');
             f.txtPlazo.focus();

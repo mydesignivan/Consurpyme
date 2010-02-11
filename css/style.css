@@ -93,7 +93,7 @@ a.link1:hover{
   color:#000;
 }
 .input1{
-    width:343px;
+    width:320px;
 }
 .input2{
     width:80px;
@@ -314,13 +314,30 @@ a.link1:hover{
     }
     .table-proyect .column-info3{
        background-color:#fff;
-       width:185px;
+       width:180px;
+       border-bottom:2px solid #1D3E6E;
     }
+    .table-proyect .column-info3 ul{
+          width: 280px;
+          border:1px solid;
+          float:left;
+          margin-right:3px;
+        }
         .table-proyect .column-info3 li{
-           display: inline;
+           list-style-type: none;
+           width: 107px;
+           height: 90px;
            float:left;
            margin-right:3px;
         }
+.thumbs{
+   width: 107px;
+   height: 90px;
+   float:left;
+   margin-right:3px;
+   border:1px solid;
+   clear:none;
+}
 /*************************** FIN table****************************/
 
 /*************************** Servicios ****************************/
