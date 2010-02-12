@@ -24,22 +24,22 @@
         <div class="span-19 prepend-1">
             
 
-            <table width="280" class="span-19 table-proyect" cellspacing="0">
+            <table width="290" class="table-proyect" cellspacing="0">
                 <thead>
                     <tr class="top-table">
                         <td class="span-1 column-table" ><span>Cliente</span></td>
                         <td class="span-2-1 column-table"><span>Descripci&oacute;n</span></td>
-                        <td class="column-table"><span>Fotos</span></td>
+                        <td class="span-5 column-table"><span>Fotos</span></td>
                     </tr>
                 </thead>
-                <?php if( $listGallery->num_rows>0 ) {?><tbody ><?php }?>
+                <?php if( $listGallery->num_rows>0 ) {?><tbody style="width:290px"><?php }?>
                 <?php
                 $n=0;
                 foreach( $listGallery->result_array() as $row ){$n++;?>
                     <tr>
                         <td class="span-1 column-info vert-align-top"><span class="bold"><?=$row['title'];?></span></td>
                         <td class="span-2-1 column-info2 vert-align-top"><span><?=nl2br($row['description']);?></span></td>
-                        <td class="column-info3">
+                        <td class="span-5 column-info3">
                             <ul>
                             <?php $listImages = $this->gallery_model->get_listImages($row['gallery_id']);
                                 foreach( $listImages->result_array() as $row2 ){?>

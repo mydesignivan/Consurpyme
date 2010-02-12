@@ -25,26 +25,29 @@
         <div class="proyecto span-19 push-1">
             <form action="" id="form1" method="post" enctype="application/x-www-form-urlencoded">
                 <div class="span-10 space-bottom">
-                    <span>*Cliente</span><input class="float-right input1 border" type="text" name="txtClient" value="<?=@$data["client"];?>" />
+                    <span>*Cliente&nbsp;&nbsp;&nbsp;&nbsp;</span><input class="input1 border" type="text" name="txtClient" value="<?=@$data["client"];?>" />
                 </div>
                 <div class="span-7 clear space-bottom">
                     <span>*Descripci&oacute;n</span><br/>
                     <textarea class="textarea1 border" rows="5" cols="20" name="txtDescription"><?=@$data["description"];?></textarea>
                 </div>
-                <div class="span-4 space-bottom clear">
+                <br class="clear" />
+                <div class="span-4 space-bottom ">
                     <span>*Inicio &emsp;</span><input class="input2 border" type="text" name="txtDateStart" id="txtDateStart" value="<?=@$data["date_start"];?>" />
                 </div>
                 <div class="span-4 space-bottom">
                     <span>Fin &emsp;</span><input class="input2 border" type="text" name="txtDateEnd" id="txtDateEnd" value="<?=@$data["date_end"];?>" />
                 </div>
                 <div class="span-9 space-bottom clear">
-                    <span class="float-left">*Plazo&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                    <input class="input-plazo border" type="text" name="txtPlazo" value="<?=@$data["plazo"];?>" />
-                    <select name="cboPlazoUnit">
-                        <option value="d&iacute;as" <?php if( @$data["plazo_unit"]=="días" ) echo 'selected="selected"';?>>D&iacute;as</option>
-                        <option value="meses" <?php if( @$data["plazo_unit"]=="meses" ) echo 'selected="selected"';?>>Meses</option>
-                        <option value="a&ntilde;os" <?php if( @$data["plazo_unit"]=="años" ) echo 'selected="selected"';?>>A&ntilde;os</option>
-                    </select>
+                    <div class="float-left">*Plazo&nbsp;&nbsp;&nbsp;</div>
+                    <div class="span-5">
+                        <input class="input-plazo border float-left" type="text" name="txtPlazo" value="<?=@$data["plazo"];?>" style="float:left;" />
+                        <select name="cboPlazoUnit" class="combo1">
+                            <option value="d&iacute;as" <?php if( @$data["plazo_unit"]=="días" ) echo 'selected="selected"';?>>D&iacute;as</option>
+                            <option value="meses" <?php if( @$data["plazo_unit"]=="meses" ) echo 'selected="selected"';?>>Meses</option>
+                            <option value="a&ntilde;os" <?php if( @$data["plazo_unit"]=="años" ) echo 'selected="selected"';?>>A&ntilde;os</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="span-7 clear space-bottom">
                     <span>(*) Campos obligatorios</span>
