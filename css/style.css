@@ -381,12 +381,14 @@ a.link1:hover{
         background:url(../images/background_top_contact.png) no-repeat top center;
         width:667px;
         height:9px;
+        margin-left:10px;
     }
     .contact .bbottom{
         clear:left;
         background:url(../images/background_bottom_contact.png) no-repeat top center;
         width:667px;
         height:9px;
+        margin-left:10px;
     }
     .contact .row-form{
         position: relative;
@@ -397,12 +399,12 @@ a.link1:hover{
         clear:left;
         background-color: #FAFAFA;
         width:665px;
-        margin-left: 20px;
+        margin-left: 30px;
         border-left: 1px solid #536C90;
         border-right: 1px solid #536C90;
     }
         .contact .contact-form .column-form{
-            margin:0 -5px 0 15px;
+            margin:0 -15px 0 28px;
         }
         .contact .contact-form .message{
             margin-top: 20px;

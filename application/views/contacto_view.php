@@ -54,11 +54,6 @@
                     </div>
                 </form>
 
-                <div class="span-11 prepend-1">
-                    <span>Vicente Lopez 2658 - (8000) Bahía Blanca</span><br/>
-                    <span>Tel:(0291) 4886229/4886234 - Email:info@consurpyme.com.ar</span>
-                </div>
-
                 <?php }elseif( $this->session->flashdata('status_send')=="ok" ){?>
                     <div class="message">
                         <p>
