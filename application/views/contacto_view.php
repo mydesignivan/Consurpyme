@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Consurpyme</title>
+    <title>Consurpyme - Contacto</title>
     <?php include("includes/head_inc.php");?>
     <script type="text/javascript" src="js/class.contact.js"></script>
 </head>
@@ -49,7 +49,6 @@
                         </div>
                     </div>
 
-                    <div class="span-8 clear legend">(*) Campos obligatorios.</div>
                     <div class="span-3 clear prepend-7">
                         <input class="button3" type="button" value="Enviar" onclick="Contact.send();" />
                     </div>

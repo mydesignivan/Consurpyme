@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Consurpyme</title>
+    <title>Consurpyme - Certificacion ISO 9001:2008</title>
     <?php include("includes/head_inc.php");?>
 
     <!-- SCRIPT SIMPLE MODAL -->
@@ -29,7 +29,7 @@
 
     <div class="clear span-21 push-1 last content">
         <div class="span-12 prepend-1 content-left">
-            <p class="text-subtitle">Politica de Privacidad</p>
+            <p class="text-subtitle">Politica de Calidad</p>
             <p>Nuestra empresa, dedicada fundamentalmente a la direcci&oacute;n y ejecuci&oacute;n de obras de Ingenier&iacute;a Civil e Industrial, asegura brindar un servicio cada vez m&aacute;s eficiente en el &aacute;rea a trav&eacute;s de su organizaci&oacute;n interna y la mejora continua en su accionar.</p>
             <span class="text-subtitle2">El compromiso con la calidad en nuestros servicios implica:</span><br/>
             <p>Brindar a nuestros clientes el servicio y asesoramiento que m&aacute;s se adecua a sus necesidades, con un estricto cumplimiento de las condiciones pactadas, alcance, costos y plazos acordados.</p>

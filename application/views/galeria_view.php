@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Consurpyme</title>
+    <title>Consurpyme - Galeria de Proyectos</title>
     <?php include("includes/head_inc.php");?>
 
     <!-- JQUERY FANCYBOX -->
@@ -24,22 +24,22 @@
         <div class="span-19 prepend-1">
             
 
-            <table width="290" class="table-proyect" cellspacing="0">
+            <table class="table-proyect" cellspacing="0">
                 <thead>
                     <tr class="top-table">
-                        <td class="span-1 column-table" ><span>Cliente</span></td>
-                        <td class="span-2-1 column-table"><span>Descripci&oacute;n</span></td>
-                        <td class="span-5 column-table"><span>Fotos</span></td>
+                        <td class="span-1 column-table width-1" ><span>Cliente</span></td>
+                        <td class="span-2-1 column-table width-2"><span>Descripci&oacute;n</span></td>
+                        <td class="span-5 column-table width-3"><span>Fotos</span></td>
                     </tr>
                 </thead>
-                <?php if( $listGallery->num_rows>0 ) {?><tbody style="width:290px"><?php }?>
+                <?php if( $listGallery->num_rows>0 ) {?><tbody><?php }?>
                 <?php
                 $n=0;
                 foreach( $listGallery->result_array() as $row ){$n++;?>
                     <tr>
-                        <td class="span-1 column-info vert-align-top"><span class="bold"><?=$row['title'];?></span></td>
-                        <td class="span-2-1 column-info2 vert-align-top"><span><?=nl2br($row['description']);?></span></td>
-                        <td class="span-5 column-info3">
+                        <td class="span-1 column-info vert-align-top  width-1"><span class="bold"><?=$row['title'];?></span></td>
+                        <td class="span-2-1 column-info2 vert-align-top  width-2"><span><?=nl2br($row['description']);?></span></td>
+                        <td class="span-5 column-info3  width-3">
                             <ul>
                             <?php $listImages = $this->gallery_model->get_listImages($row['gallery_id']);
                                 foreach( $listImages->result_array() as $row2 ){?>

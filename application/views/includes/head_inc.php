@@ -1,8 +1,8 @@
 <base href="<?=base_url();?>" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="description" content="" />
-<meta name="keywords" content="" />
+<meta name="description" content="CONSURpyme Ingeniería S.A. desarrolla servicios de proyecto, dirección, gerenciamiento y/o ejecución de obras públicas y privadas. Certifica Norma ISO 9001:2008" />
+<meta name="keywords" content="Construcción de redes y gasoductos para gas natural industriales, montaje de plantas reguladoras, Obras civiles, Obras civiles de telefonía y transmisión de datos, Montaje de plantas reguladoras, Saneamiento, agua potable y sistemas de alumbrado, Servicios profesionales, Evaluación de impacto ambiental y Sistemas de Gestión Ambiental según ISO 14000, Sistemas de Gestión de la Calidad según ISO 9001, Servicios de Higiene y Seguridad Laboral" />
 
 <!--<link rel="shortcut icon" href="images/favicon.ico" />-->
 

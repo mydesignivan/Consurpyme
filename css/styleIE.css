@@ -10,3 +10,23 @@
 .sidebar .image-iso .bottom-certificado .icon-view img{
      margin-top:-30px;
 }
+
+
+/***************************table****************************/
+    .table-proyect .column-info3 ul{
+        position:relative;
+        width:100%;
+        float:left;
+    }
+
+    .table-proyect .width-1{
+       width:150px;
+    }
+    .table-proyect .width-2{
+       width:210px;
+    }
+    .table-proyect .width-3{
+       width:350px;
+    }
+
+/*************************** FIN table****************************/

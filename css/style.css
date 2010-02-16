@@ -248,17 +248,20 @@ a.link1:hover{
 
 /*----------------------- Footer --------------------------*/
 .footer{
-    background:url(../images/background_footer.png) repeat-x;
-    height:61px;
+    background:url(../images/bg_bottom_footer.jpg) repeat-x;
+    height:95px;
     margin-top:-18px;
     color:#1E4370;
     padding-top:5px;
-    font-weight:bold;
 }
-.valid{
-    float:right !important;
-    text-align:right;
-}
+    .footer .valid{
+        float:right !important;
+        text-align:right;
+    }
+    .footer .info-legal{
+        margin-top:7px;
+        font-weight:bold;
+    }
 /*-----------------------FIN Footer --------------------------*/
 
 /*-----------------------PANEL --------------------------*/
@@ -329,7 +332,6 @@ a.link1:hover{
             position:relative;
             width:100%;
             float:left;
-            border:1px solid red;
         }
         .table-proyect .column-info3 li{
            list-style-type: none;
@@ -337,6 +339,7 @@ a.link1:hover{
            height: 90px;
            float:left;
            margin-right:3px;
+           margin-bottom: 5px;
         }
 /*************************** FIN table****************************/
 
