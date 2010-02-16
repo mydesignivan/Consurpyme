@@ -14,6 +14,10 @@
 <link rel="stylesheet" href="css/styleIE.css" type="text/css" media="screen, projection"/>
 <![endif]-->
 
+<!--[if IE 8]>
+<link href="css/styleIE8.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 
 
