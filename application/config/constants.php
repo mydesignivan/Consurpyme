@@ -68,8 +68,10 @@ define('UPLOAD_MAXSIZE', 1536); //Expresado en Kylobytes
 
 define('IMAGE_THUMB_WIDTH', 107);
 define('IMAGE_THUMB_HEIGHT', 90);
+define('IMAGE_THUMB_QUALITY', 90);
 define('IMAGE_ORIGINAL_WIDTH', 800);
 define('IMAGE_ORIGINAL_HEIGHT', 600);
+define('IMAGE_ORIGINAL_QUALITY', 80);
 
 
 /*

@@ -7,7 +7,7 @@
 <!--<link rel="shortcut icon" href="images/favicon.ico" />-->
 
 <!-- Framework CSS -->
-<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen, projection"/>
+<link rel="stylesheet" href="css/screen.min.css" type="text/css" media="screen, projection"/>
 <link rel="stylesheet" href="css/print.css" type="text/css" media="print"/>
 <!--[if gte IE 7]>
 <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen, projection"/>
@@ -18,7 +18,7 @@
 <link href="css/styleIE8.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 
-<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/style.min.css" rel="stylesheet" type="text/css" />
 
 
 <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>

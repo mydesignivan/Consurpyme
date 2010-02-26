@@ -1,0 +1,82 @@
+h1{color:#001D77;font-size:180%;font-weight:700}
+.text-logo{color:#68ACE5;font-family:"Times New Roman", serif;font-size:130%;font-style:italic;font-weight:700}
+.text-subtitle{color:#68ACE5;font-size:130%}
+.text-subtitle2{color:#68ACE5;font-weight:700}
+.italic{font-style:italic}
+.bold{font-weight:700}
+a.link{color:#68ACE5;text-decoration:underline}
+a.link2{color:#002C5F;text-decoration:none;font-weight:700}
+.space-bottom{margin-bottom:20px}
+.space-bottom2{margin-bottom:10px}
+.space-bottom3{padding-left:108px;padding-bottom:10px;margin:0 auto}
+.border-none{border:none!important}
+a.link1,a.link1:visited,a.link1:link{color:#fff;text-align:left;text-decoration:none;font-weight:700}
+.display-hidden{display:none}
+.display-visible{display:block}
+.login{border:1px solid #636F91;width:200px;float:right}
+.button1{border:1px solid #636F91;background-color:#20558A;color:#fff}
+.button2{background-color:#E6E6E6;color:#032A44}
+.button3{background:url(../images/image_button.png) no-repeat left center;color:#032A44;width:89px;height:24px;border:none}
+.border{border:1px solid #68ACE5!important;background-color:#fff;color:#000}
+.input1{width:320px}
+.input2{width:80px}
+.input3{width:145px}
+.input4{background:url(../images/image_input1.png) no-repeat top left;height:28px;width:281px;float:left;margin-bottom:10px}
+.input4 input{border:none!important;background-color:transparent!important;width:275px;padding:5px 2px 0}
+.input5{background:url(../images/image_input2.png) no-repeat top left;height:60px;width:281px;float:left;margin-bottom:10px}
+.input5 textarea{border:none!important;background-color:transparent!important;height:50px;width:275px}
+.input-plazo{width:50px;text-align:center}
+.textarea1{width:375px;height:60px}
+.combo1{width:auto;float:left;margin-top:0;margin-left:5px}
+.icon-menu{text-align:right;margin-top:20px}
+.icon-menu a{margin-right:10px}
+.header{background:url(../images/background_header.png) no-repeat top center;height:410px;position:relative;z-index:10}
+.logo{margin-top:30px}
+.titles{margin-top:-50px;position:relative;z-index:20}
+.flash{height:245px;margin-top:8px}
+.menu ul{color:#fff;font-size:120%;margin-top:15px;margin-left:30px}
+.menu li{display:inline-block;margin-right:-3px;text-align:center}
+.menu li a{background:url(../images/background_menu.png) repeat-x;width:132px;height:41px;display:block;padding-top:8px}
+.content{background-color:#1D3E6E;margin-top:-55px;position:relative;z-index:0;padding-top:60px;padding-bottom:10px;text-align:justify}
+.content .column img{margin:0 0 10px 20px}
+.sidebar .images{background-color:#fff;margin-bottom:10px;text-align:center;width:200px;height:130px;padding-top:5px}
+.sidebar .image-iso{background:url(../images/image_3.png) no-repeat top left;height:321px}
+.sidebar .image-iso .top-certificado{margin:14px 0 0 20px}
+.sidebar .image-iso .center-certificado{height:230px}
+.sidebar .image-iso .bottom-certificado{font-size:90%;color:#002C5F;margin-left:20px;width:135px;float:left}
+.sidebar .image-iso .bottom-certificado .icon-view{width:29px;float:right;margin-top:-10px}
+.footer{background:url(../images/bg_bottom_footer.jpg) repeat-x;height:95px;margin-top:-18px;color:#1E4370;padding-top:5px}
+.footer .valid{float:right!important;text-align:right;margin-top:3px}
+.footer .address{font-size:100%;font-weight:700;margin-top:3px}
+.footer .address a{color:#1E4370;text-decoration:underline}
+.footer .info-legal{margin-top:25px;font-weight:700;font-size:80%}
+.content-login{color:#1E4370;border:1px solid #636F91;margin-top:200px;width:320px;background-color:#E6E6E6;padding:20px 0 0 20px}
+.content-login span{margin-right:20px;float:left}
+.content-login .messagerror{float:left;border:2px solid blue;color:red;background-color:#fff;font-size:100%;font-weight:700;margin-bottom:10px;text-align:center;width:280px;padding:8px}
+.proyect-message{border:1px solid #002C5F;background-color:#E6E6E6;color:#000;font-size:110%;margin-top:10px;text-align:center;padding:10px}
+.table-proyect{margin-top:10px}
+.vert-align-top{vertical-align:top}
+.table-proyect .top-table{background:url(../images/background_table.png) repeat-x top left;text-align:center}
+.table-proyect .column-table{border-right:1px solid #2F4B79}
+.table-proyect .column-info{background-color:#92AAC4;border-bottom:2px solid #1D3E6E}
+.table-proyect .column-info2{background-color:#B5C3D7;border-bottom:2px solid #1D3E6E}
+.table-proyect .column-info3{background-color:#fff;border-bottom:2px solid #1D3E6E}
+.table-proyect .column-info3 ul{position:relative;width:100%;float:left}
+.table-proyect .column-info3 li{list-style-type:none;width:107px;height:90px;float:left;margin-right:3px;margin-bottom:5px}
+.list-services{margin:5px 0 0 15px}
+.list-services li{margin-top:5px;padding:0 5px 5px 0}
+.list-services .list{background-color:#224C7F}
+.list-services .list2{background-color:#1F4374}
+.list-services img{float:left}
+.image-service{background-color:#fff;width:145px;height:95px;float:left;margin-right:15px;text-align:center;padding:5px}
+.contact{height:275px;color:#1D3E6E}
+.contact .btop{background:url(../images/background_top_contact.png) no-repeat top center;width:667px;height:9px;margin-left:10px}
+.contact .bbottom{clear:left;background:url(../images/background_bottom_contact.png) no-repeat top center;width:667px;height:9px;margin-left:10px}
+.contact .row-form{position:relative;margin-top:20px}
+.contact .contact-form{float:left;clear:left;background-color:#FAFAFA;width:665px;margin-left:30px;border-left:1px solid #536C90;border-right:1px solid #536C90}
+.contact .contact-form .column-form{margin:0 -15px 0 28px}
+.contact .contact-form .message{margin-top:20px;margin-bottom:10px;text-align:center;font-size:120%}
+.msgvalidator{float:left;clear:left;top:56px;border:2px solid #B0C0D3;background-color:#fff;color:red;z-index:100;display:none;margin:-8px 0 12px;padding:5px}
+.legend{font-size:90%;font-weight:700;text-align:left;margin-left:16px}
+a.link2:hover,a.link1:hover{text-decoration:underline}
+.menu li a:hover,.menu .current{background:url(../images/background_menu_over.png) repeat-x}

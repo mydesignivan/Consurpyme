@@ -27,6 +27,7 @@ class Ajax_upload extends Controller {
             $config['maintain_ratio'] = TRUE;
             $config['width'] = IMAGE_THUMB_WIDTH;
             $config['height'] = IMAGE_THUMB_HEIGHT;
+            $config['quality'] = IMAGE_THUMB_QUALITY;
             $this->image_lib->initialize($config);
             if( !$this->image_lib->resize() ) die($this->image_lib->display_errors());
 
@@ -37,6 +38,7 @@ class Ajax_upload extends Controller {
             $config['maintain_ratio'] = TRUE;
             $config['width'] = IMAGE_ORIGINAL_WIDTH;
             $config['height'] = IMAGE_ORIGINAL_HEIGHT;
+            $config['quality'] = IMAGE_ORIGINAL_QUALITY;
             $this->image_lib->initialize($config);
             if( !$this->image_lib->resize() ) die($this->image_lib->display_errors());
 
