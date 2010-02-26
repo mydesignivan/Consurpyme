@@ -4,7 +4,7 @@
     <title>Consurpyme</title>
     <?php include("includes/head_inc.php");?>
 
-    <script type="text/javascript" src="js/class.account.js"></script>
+    <script type="text/javascript" src="js/class.account.min.js"></script>
 </head>
 
 <body>

@@ -55,7 +55,7 @@ var Gallery = new (function(){
 
     this.remove_inputfile = function(el, image_id){            
         if( working ){
-            alert("El servidor se encuentra ocupado.")
+            alert("El servidor se encuentra ocupado.");
             return false;
         }
         
@@ -185,11 +185,11 @@ var Gallery = new (function(){
         hidden : function(input){
             auDiv.find('.ajax-loader').hide();
         }
-    }
+    };
 
     var create_iframe = function(){
         var iframe = $('<iframe name="iframeUpload" id="iframeUpload" src="" width="400" height="100" class="display-hidden"></iframe>');
-            iframe.hide()
+            iframe.hide();
             iframe.bind('load', upload_success);
         return iframe;
     };

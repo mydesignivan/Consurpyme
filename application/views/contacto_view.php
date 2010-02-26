@@ -3,7 +3,7 @@
 <head>
     <title>Consurpyme - Contacto</title>
     <?php include("includes/head_inc.php");?>
-    <script type="text/javascript" src="js/class.contact.js"></script>
+    <script type="text/javascript" src="js/class.contact.min.js"></script>
 </head>
 
 <body>
@@ -23,27 +23,27 @@
                 <?php if( !$this->session->flashdata('status_send') ){?>
                 <form id="form1" action="<?=site_url('/contacto/send/');?>" method="post" enctype="application/x-www-form-urlencoded">
                     <div class="column-form span-8">
-                        <div class="row-form"><span>*Nombre:</span><br/>
+                        <div class="row-form"><span>Nombre:</span><br/>
                             <div class="input4"><input type="text" name="txtFirstName" /></div>
                             <div class="msgvalidator"></div>
                         </div>
                         <div class="row-form clear"><span>Apellido:</span><br/>
                             <div class="input4"><input type="text" name="txtLastName" /></div>
                         </div>
-                        <div class="row-form clear"><span>*Mensaje:</span><br/>
+                        <div class="row-form clear"><span>Mensaje:</span><br/>
                             <div class="input5"><textarea rows="5" cols="20" name="txtMessage" ></textarea></div>
                             <div class="msgvalidator"></div>
                         </div>
                     </div>
                     <div class="column-form span-8">
-                        <div class="row-form"><span>*Asunto:</span><br/>
+                        <div class="row-form"><span>Asunto:</span><br/>
                             <div class="input4"><input type="text" name="txtSubject" /></div>
                             <div class="msgvalidator"></div>
                         </div>
                         <div class="row-form clear"><span>Horario de Contacto:</span><br/>
                             <div class="input4"><input type="text" name="txtContactHours" /></div>
                         </div>
-                        <div class="row-form clear"><span>*E-mail:</span><br/>
+                        <div class="row-form clear"><span>E-mail:</span><br/>
                             <div class="input4"><input type="text" name="txtEmail" /></div>
                             <div class="msgvalidator"></div>
                         </div>

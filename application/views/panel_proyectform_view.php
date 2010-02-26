@@ -9,7 +9,7 @@
     <script type="text/javascript" src="js/jquery.datepicker/ui.datepicker.js"></script>
     <!--END SCRIPT-->
 
-    <script type="text/javascript" src="js/class.proyect.js"></script>
+    <script type="text/javascript" src="js/class.proyect.min.js"></script>
 </head>
 
 <body>

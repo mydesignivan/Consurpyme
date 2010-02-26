@@ -257,10 +257,21 @@ a.link1:hover{
     .footer .valid{
         float:right !important;
         text-align:right;
+        margin-top: 3px;
     }
-    .footer .info-legal{
-        margin-top:7px;
+    .footer .address{
+        font-size:100%;
         font-weight:bold;
+        margin-top: 3px;
+    }
+        .footer .address a{
+            color:#1E4370;
+            text-decoration:underline;
+        }
+    .footer .info-legal{
+        margin-top:25px;
+        font-weight:bold;
+        font-size: 80%;
     }
 /*-----------------------FIN Footer --------------------------*/
 

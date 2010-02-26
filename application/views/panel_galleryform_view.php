@@ -5,7 +5,7 @@
     <?php include("includes/head_inc.php");?>
 
     <script type="text/javascript" src="js/helpers.js"></script>
-    <script type="text/javascript" src="js/class.gallery.js"></script>
+    <script type="text/javascript" src="js/class.gallery.min.js"></script>
 </head>
 
 <body>
